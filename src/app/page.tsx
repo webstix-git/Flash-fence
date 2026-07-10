@@ -8,7 +8,7 @@ import {
   MapPin,
   Phone,
   ArrowRight,
-  CheckCircle
+  Check
 } from "lucide-react";
 import { GALLERY_PROJECTS } from "@/data/gallery-projects";
 import { TESTIMONIALS } from "@/data/testimonials";
@@ -279,7 +279,7 @@ export default function Home() {
               <ul className="where-cities">
                 {SERVICE_CITIES.map((city) => (
                   <li key={city}>
-                    <CheckCircle size={16} />
+                    <Check size={14} strokeWidth={2.5} />
                     {city}
                   </li>
                 ))}
@@ -444,15 +444,15 @@ export default function Home() {
 
           <div className="cta-banner-features">
             <span className="cta-feature">
-              <CheckCircle size={16} />
+              <Check size={14} strokeWidth={2.5} />
               2-Year Craftsmanship Warranty
             </span>
             <span className="cta-feature">
-              <CheckCircle size={16} />
+              <Check size={14} strokeWidth={2.5} />
               Owner Dylan Gardow On Site
             </span>
             <span className="cta-feature">
-              <CheckCircle size={16} />
+              <Check size={14} strokeWidth={2.5} />
               Free Estimates
             </span>
           </div>
