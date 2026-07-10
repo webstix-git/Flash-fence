@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, User, Calendar, ArrowRight } from "lucide-react";
+import { Clock, User, Calendar } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -77,8 +77,8 @@ export default function BlogPost2() {
             <p>
               Dylan Gardow is ready to inspect your site. Get in touch to schedule a free boundary and groundwork consultation.
             </p>
-            <Link href="/contact" className="btn btn-primary" style={{ marginTop: "var(--space-sm)" }}>
-              Get A Free Estimate <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
+            <Link href="/contact" className="btn btn-primary">
+              Get A Free Estimate
             </Link>
           </div>
         </div>

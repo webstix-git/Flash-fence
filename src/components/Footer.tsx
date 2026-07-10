@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="footer-social">
               <span className="footer-social-label">Follow Us On</span>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/p/Flash-Fence-61556697906995/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
@@ -53,6 +53,7 @@ export default function Footer() {
               <li><Link href="/services/fencing" className="footer-link">Fencing</Link></li>
               <li><Link href="/services/excavation" className="footer-link">Excavation</Link></li>
               <li><Link href="/gallery" className="footer-link">Gallery</Link></li>
+              <li><Link href="/testimonials" className="footer-link">Testimonials</Link></li>
               <li><Link href="/faq" className="footer-link">FAQs</Link></li>
             </ul>
           </div>

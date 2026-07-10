@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 interface InnerPageCtaProps {
   title: string;
@@ -29,14 +29,13 @@ export default function InnerPageCta({
         <h2 className="heading-no-accent">{title}</h2>
         <p className="inner-page-cta-desc">{description}</p>
         <div className="inner-page-cta-actions">
-          <Link href={buttonHref} className="btn btn-primary">
-            {buttonText}
-            <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
-          </Link>
-          <a href="tel:715-299-0663" className="btn btn-secondary">
-            <Phone size={16} style={{ marginRight: "var(--space-xs)", color: "var(--color-primary)" }} />
+          <a href="tel:715-299-0663" className="btn btn-primary">
+            <Phone size={16} />
             Call 715-299-0663
           </a>
+          <Link href={buttonHref} className="btn btn-secondary">
+            {buttonText}
+          </Link>
         </div>
       </div>
     </section>

@@ -5,44 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ShieldCheck,
   MapPin,
   Phone,
   ArrowRight,
-  Star,
-  Layers,
-  Hammer,
-  BrushCleaning,
-  LandPlot,
-  Wrench,
   CheckCircle
 } from "lucide-react";
 import { GALLERY_PROJECTS } from "@/data/gallery-projects";
+import { TESTIMONIALS } from "@/data/testimonials";
+import GalleryGrid from "@/components/GalleryGrid";
+import ReviewsBlock from "@/components/ReviewsBlock";
 
-// Review list pulling from Google / Angi
-const TESTIMONIALS = [
-  {
-    id: 1,
-    author: "Sarah M.",
-    rating: 5,
-    source: "Google",
-    content: "Dylan showed up when he said he would and the fence looks perfect. You can tell he genuinely cares about the work."
-  },
-  {
-    id: 2,
-    author: "Mike R.",
-    rating: 5,
-    source: "Angi",
-    content: "We needed our old fence torn out and the yard prepped in winter. Dylan had it done fast and left the place spotless."
-  },
-  {
-    id: 3,
-    author: "Jenna K.",
-    rating: 5,
-    source: "Google",
-    content: "The vinyl fence is exactly what we wanted. Dylan walked us through the layout personally, and it was a great experience."
-  }
-];
+const HOMEPAGE_TESTIMONIALS = TESTIMONIALS.slice(0, 3);
 
 const SERVICE_CITIES = [
   "Eau Claire & Altoona",
@@ -93,14 +66,9 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.45 }}
               className="hero-actions"
             >
-              <Link href="/services" className="btn btn-primary">
-                Explore Our Services
-                <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
+              <Link href="/contact" className="btn btn-primary">
+                Get A Free Quote
               </Link>
-              <a href="tel:715-299-0663" className="btn btn-secondary hero-call-btn">
-                <Phone size={16} className="hero-call-icon" style={{ marginRight: "var(--space-xs)" }} />
-                Call 715-299-0663
-              </a>
             </motion.div>
           </div>
         </div>
@@ -192,7 +160,7 @@ export default function Home() {
                 <p className="pillar-desc">
                   Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, and ornamental steel.
                 </p>
-                <Link href="/services/fencing" className="btn btn-secondary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.85rem" }}>
+                <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
                 </Link>
               </div>
@@ -212,7 +180,7 @@ export default function Home() {
                 <p className="pillar-desc">
                   Year-round groundwork, lot clearing, fence line prep, minor demolition, and concrete sub-base preparation built to withstand frost.
                 </p>
-                <Link href="/services/excavation" className="btn btn-secondary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.85rem" }}>
+                <Link href="/services/excavation" className="btn btn-secondary btn-compact">
                   View Excavation Services
                 </Link>
               </div>
@@ -236,11 +204,8 @@ export default function Home() {
           </div>
 
           <div className="services-grid" style={{ marginTop: 0 }}>
-            <div className="service-card">
+            <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <div className="service-icon-box">
-                <ShieldCheck size={24} />
-              </div>
               <h3>Vinyl Fencing</h3>
               <p>Premium privacy and picket vinyl options. Resilient against wind, winter cold, and moisture. Never rot or fade.</p>
               <Link href="/services/fencing" className="blog-link">
@@ -248,11 +213,8 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="service-card">
+            <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <div className="service-icon-box">
-                <Hammer size={24} />
-              </div>
               <h3>Wood Fencing</h3>
               <p>Classic cedar privacy, spaced picket, and post-and-rail. Constructed on-site to match your yard&apos;s natural contours.</p>
               <Link href="/services/fencing" className="blog-link">
@@ -260,11 +222,8 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="service-card">
+            <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <div className="service-icon-box">
-                <Wrench size={24} />
-              </div>
               <h3>Chain Link &amp; Ornamental</h3>
               <p>Industrial galvanized or black vinyl-coated chain link for security, and high-strength ornamental steel fencing.</p>
               <Link href="/services/fencing" className="blog-link">
@@ -274,9 +233,6 @@ export default function Home() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <div className="service-icon-box">
-                <BrushCleaning size={24} />
-              </div>
               <h3>Land Clearing &amp; Storm Prep</h3>
               <p>Removing thick brush, small trees, storm damage, and old fencing. Clean line prep for property development.</p>
               <Link href="/services/site-prep" className="blog-link">
@@ -286,9 +242,6 @@ export default function Home() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <div className="service-icon-box">
-                <LandPlot size={24} />
-              </div>
               <h3>Site &amp; Concrete Prep</h3>
               <p>Grading, soil compaction, and digging out sub-bases for concrete pads, patios, driveways, or fence lines.</p>
               <Link href="/services/excavation" className="blog-link">
@@ -298,9 +251,6 @@ export default function Home() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <div className="service-icon-box">
-                <Layers size={24} />
-              </div>
               <h3>Demolition &amp; Utilities</h3>
               <p>Small demolition projects, concrete slab breaking, and trenching for water line, sewer line, or drainage routing.</p>
               <Link href="/services/excavation" className="blog-link">
@@ -334,9 +284,8 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="btn btn-primary" style={{ marginTop: "var(--space-sm)" }}>
+              <Link href="/contact" className="btn btn-primary">
                 Get A Free Quote
-                <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
               </Link>
             </div>
 
@@ -386,41 +335,11 @@ export default function Home() {
             </button>
           </div>
 
-          <motion.div layout className="gallery-grid">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((p) => (
-                <motion.div
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  key={p.id}
-                  className={`gallery-item ${p.category === "fencing" ? "fence-item" : ""}`}
-                >
-                  <div className="gallery-image-wrapper">
-                    <Image
-                      src={p.image}
-                      alt={p.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="gallery-image"
-                      loading="lazy"
-                    />
-                    <div className="gallery-meta">
-                      <h4>{p.title}</h4>
-                      <span>{p.details}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+          <GalleryGrid projects={filteredProjects} />
 
           <div style={{ textAlign: "center", marginTop: "var(--space-xl)" }}>
             <Link href="/gallery" className="btn btn-primary">
               View More Photos
-              <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
             </Link>
           </div>
         </div>
@@ -432,43 +351,7 @@ export default function Home() {
           <span className="text-mono">What Neighbors Say</span>
           <h2>Reviewed On Google &amp; Angi</h2>
 
-          <div className="reviews-grid">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="review-card-light">
-                <div>
-                  <div className="review-stars">
-                    {[...Array(t.rating)].map((_, i) => (
-                      <Star key={i} size={15} fill="var(--color-primary)" stroke="var(--color-primary)" />
-                    ))}
-                  </div>
-                  <p className="review-text">{t.content}</p>
-                </div>
-                <div className="review-footer">
-                  <span className="review-author">{t.author}</span>
-                  <span className="review-source">via {t.source}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="reviews-actions">
-            <a
-              href="https://www.google.com/search?q=flash+fence"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              Read Google Reviews
-            </a>
-            <a
-              href="https://www.angi.com/companylist/us/wi/eau-claire/flash-fence-llc-reviews-1.htm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline-light"
-            >
-              See us on Angi
-            </a>
-          </div>
+          <ReviewsBlock testimonials={HOMEPAGE_TESTIMONIALS} columns={3} />
         </div>
       </section>
 
@@ -486,7 +369,7 @@ export default function Home() {
                 Professional fencing tips and groundwork guidelines to prepare your Chippewa Valley property.
               </p>
             </div>
-            <Link href="/blog" className="btn btn-primary blog-index-btn" style={{ alignSelf: "flex-start", marginTop: "var(--space-sm)" }}>
+            <Link href="/blog" className="btn btn-primary" style={{ alignSelf: "flex-start", marginTop: "var(--space-sm)" }}>
               View Blog Index
             </Link>
           </div>
@@ -556,7 +439,6 @@ export default function Home() {
             </a>
             <Link href="/contact" className="btn btn-secondary">
               Get A Free Quote
-              <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)", color: "var(--color-primary)" }} />
             </Link>
           </div>
 

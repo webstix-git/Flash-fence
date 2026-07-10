@@ -3,12 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ShieldCheck,
-  Hammer,
-  Wrench,
-  BrushCleaning,
-  LandPlot,
-  Layers,
   ArrowRight,
 } from "lucide-react";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -22,7 +16,7 @@ export default function ServicesIndex() {
         eyebrow="What We Do"
         title="One Shop. Fence & Ground."
         subtitle="From custom fence installation to year-round excavation and site prep, we handle your exterior projects with industrial-grade precision, all under one owner-supervised crew."
-        backgroundImage="/vinyl-fence-detail.jpg"
+        backgroundImage="/gallery/gallery-02.png"
         overlay="strong"
       />
 
@@ -59,7 +53,7 @@ export default function ServicesIndex() {
                 <p className="pillar-desc">
                   Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, and ornamental steel.
                 </p>
-                <Link href="/services/fencing" className="btn btn-secondary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.85rem" }}>
+                <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
                 </Link>
               </div>
@@ -78,7 +72,7 @@ export default function ServicesIndex() {
                 <p className="pillar-desc">
                   Year-round groundwork, lot clearing, fence line prep, minor demolition, and concrete sub-base preparation built to withstand frost.
                 </p>
-                <Link href="/services/excavation" className="btn btn-secondary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.85rem" }}>
+                <Link href="/services/excavation" className="btn btn-secondary btn-compact">
                   View Excavation Services
                 </Link>
               </div>
@@ -89,7 +83,7 @@ export default function ServicesIndex() {
 
       <div className="divider-line" />
 
-      <section className="section-light services-home-section">
+      <section className="section-light" id="services">
         <div className="container">
           <div style={{ maxWidth: "650px", marginBottom: "var(--space-xl)" }}>
             <span className="text-mono">Service Directory</span>
@@ -99,12 +93,9 @@ export default function ServicesIndex() {
             </p>
           </div>
 
-          <div className="services-grid service-cards-home" style={{ marginTop: 0 }}>
-            <div className="service-card">
+          <div className="services-grid" style={{ marginTop: 0 }}>
+            <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <div className="service-icon-box">
-                <ShieldCheck size={24} />
-              </div>
               <h3>Vinyl Fencing</h3>
               <p>Premium privacy and picket vinyl options. Resilient against wind, winter cold, and moisture. Never rot or fade.</p>
               <Link href="/services/fencing" className="blog-link">
@@ -112,11 +103,8 @@ export default function ServicesIndex() {
               </Link>
             </div>
 
-            <div className="service-card">
+            <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <div className="service-icon-box">
-                <Hammer size={24} />
-              </div>
               <h3>Wood Fencing</h3>
               <p>Classic cedar privacy, spaced picket, and post-and-rail. Constructed on-site to match your yard&apos;s natural contours.</p>
               <Link href="/services/fencing" className="blog-link">
@@ -124,11 +112,8 @@ export default function ServicesIndex() {
               </Link>
             </div>
 
-            <div className="service-card">
+            <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <div className="service-icon-box">
-                <Wrench size={24} />
-              </div>
               <h3>Chain Link &amp; Ornamental</h3>
               <p>Industrial galvanized or black vinyl-coated chain link for security, and high-strength ornamental steel fencing.</p>
               <Link href="/services/fencing" className="blog-link">
@@ -138,9 +123,6 @@ export default function ServicesIndex() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <div className="service-icon-box">
-                <BrushCleaning size={24} />
-              </div>
               <h3>Land Clearing &amp; Storm Prep</h3>
               <p>Removing thick brush, small trees, storm damage, and old fencing. Clean line prep for property development.</p>
               <Link href="/services/site-prep" className="blog-link">
@@ -150,9 +132,6 @@ export default function ServicesIndex() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <div className="service-icon-box">
-                <LandPlot size={24} />
-              </div>
               <h3>Site &amp; Concrete Prep</h3>
               <p>Grading, soil compaction, and digging out sub-bases for concrete pads, patios, driveways, or fence lines.</p>
               <Link href="/services/excavation" className="blog-link">
@@ -162,9 +141,6 @@ export default function ServicesIndex() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <div className="service-icon-box">
-                <Layers size={24} />
-              </div>
               <h3>Demolition &amp; Utilities</h3>
               <p>Small demolition projects, concrete slab breaking, and trenching for water line, sewer line, or drainage routing.</p>
               <Link href="/services/excavation" className="blog-link">

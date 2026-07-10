@@ -22,16 +22,11 @@ export default function PageHero({
   tall = false,
   children,
 }: PageHeroProps) {
-  const overlayGradient =
-    overlay === "strong"
-      ? "linear-gradient(to right, rgba(0, 0, 0, 0.92) 0%, rgb(0 0 0 / 86%) 45%, rgb(0 0 0 / 74%) 100%)"
-      : "linear-gradient(to right, rgba(0, 0, 0, 0.88) 0%, rgb(0 0 0 / 82%) 45%, rgb(0 0 0 / 68%) 100%)";
-
   return (
     <section
-      className={`page-hero${tall ? " page-hero--tall" : ""}`}
+      className={`page-hero${tall ? " page-hero--tall" : ""}${overlay === "strong" ? " page-hero--overlay-strong" : ""}`}
       style={{
-        backgroundImage: `${overlayGradient}, url('${backgroundImage}')`,
+        backgroundImage: `url('${backgroundImage}')`,
       }}
     >
       <div className="container">

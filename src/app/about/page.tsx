@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, UserCheck, Award, CheckCircle, ArrowRight, MapPin } from "lucide-react";
+import { ShieldCheck, UserCheck, Award, CheckCircle, MapPin } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -135,9 +135,8 @@ export default function About() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="btn btn-primary" style={{ marginTop: "var(--space-sm)" }}>
+              <Link href="/contact" className="btn btn-primary">
                 Start Your Quote
-                <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
               </Link>
             </div>
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Phone } from "lucide-react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -93,9 +93,14 @@ export default function Header() {
             FAQs
           </Link>
 
-          <Link href="/contact" className="btn btn-primary" style={{ padding: "0.5rem 1.25rem", fontSize: "0.85rem" }}>
-            Get A Free Quote
+          <Link href="/contact" className="nav-link">
+            Contact Us
           </Link>
+
+          <a href="tel:715-299-0663" className="btn btn-primary btn-compact">
+            <Phone size={16} style={{ marginRight: "var(--space-xs)" }} />
+            Call 715-299-0663
+          </a>
         </nav>
 
         {/* Hamburger Menu Icon */}
@@ -150,7 +155,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="/contact" className="mobile-menu-link" onClick={toggleMobileMenu}>
-              Contact
+              Contact Us
             </Link>
           </li>
         </ul>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Truck, Wrench, Layers, Trees, Construction } from "lucide-react";
+import { BrushCleaning, LandPlot, Cable } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -13,9 +13,9 @@ export default function ExcavationService() {
       <PageHero
         title="Site Excavation & Groundwork"
         subtitle="Reliable, year-round digging, grading, line clearing, and storm cleanup. We bring high-performance machinery to handle heavy sub-base preparation for Wisconsin homeowners and builders."
-        backgroundImage="/gallery/gallery-08.png"
+        backgroundImage="/gallery/gallery-02.png"
       >
-        <div style={{ display: "flex", gap: "var(--space-md)", marginTop: "var(--space-lg)", flexWrap: "wrap" }}>
+        <div className="page-hero-actions">
           <a href="#contact" className="btn btn-primary">Book Groundwork</a>
           <Link href="/contact" className="btn btn-secondary">Request Call</Link>
         </div>
@@ -41,7 +41,6 @@ export default function ExcavationService() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
                 <div className="feature-item">
-                  <Truck size={24} className="flat-icon" />
                   <div>
                     <h3>Concrete sub-base preparation</h3>
                     <p>
@@ -51,7 +50,6 @@ export default function ExcavationService() {
                 </div>
 
                 <div className="feature-item" style={{ borderBottom: "none" }}>
-                  <Wrench size={24} className="flat-icon" />
                   <div>
                     <h3>Demolition &amp; Land Clearing</h3>
                     <p>
@@ -89,7 +87,7 @@ export default function ExcavationService() {
           <div className="services-grid service-cards-home">
             <div className="service-card service-card-dark">
               <div className="service-icon-box">
-                <Trees size={24} />
+                <BrushCleaning size={24} />
               </div>
               <h3>Land &amp; Brush Clearing</h3>
               <p>Removing thick vegetation, storm debris, small trees, and stubborn stumps. Prepares clean layouts for fences or structures.</p>
@@ -97,7 +95,7 @@ export default function ExcavationService() {
 
             <div className="service-card service-card-dark">
               <div className="service-icon-box">
-                <Layers size={24} />
+                <LandPlot size={24} />
               </div>
               <h3>Sub-Grade Compact</h3>
               <p>Thorough soil compaction and gravel grading to establish stable drainage layers before pouring concrete or asphalt.</p>
@@ -105,7 +103,7 @@ export default function ExcavationService() {
 
             <div className="service-card service-card-dark">
               <div className="service-icon-box">
-                <Construction size={24} />
+                <Cable size={24} />
               </div>
               <h3>Utility Trenching</h3>
               <p>Digging out sewer, water, and electrical conduit lines. Insulated trenching set below frost lines for maximum safety.</p>

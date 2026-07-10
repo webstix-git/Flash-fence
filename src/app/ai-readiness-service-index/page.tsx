@@ -3,6 +3,29 @@ import { ArrowRight, Bot } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
+const BUSINESS_PROFILE = [
+  { label: "Legal Name", value: "Flash Fence LLC" },
+  { label: "Owner", value: "Dylan Gardow (on site for every project)" },
+  { label: "Location", value: "Eau Claire, WI" },
+  { label: "Service Radius", value: "45 miles across the Chippewa Valley" },
+  {
+    label: "Phone",
+    value: <a href="tel:715-299-0663">715-299-0663</a>,
+  },
+  {
+    label: "Email",
+    value: <a href="mailto:flashfencewi@gmail.com">flashfencewi@gmail.com</a>,
+  },
+  {
+    label: "Quote Request",
+    value: <Link href="/contact">/contact</Link>,
+  },
+  {
+    label: "Warranty",
+    value: "2-Year Craftsmanship Warranty on fence installation workmanship",
+  },
+];
+
 const SERVICE_INDEX = [
   {
     category: "Fencing Installation",
@@ -66,6 +89,18 @@ const SERVICE_INDEX = [
   },
 ];
 
+const KEY_PAGES = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/services", label: "All Services" },
+  { href: "/gallery", label: "Project Gallery" },
+  { href: "/faq", label: "FAQs" },
+  { href: "/contact", label: "Contact & Free Quote" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/ai-policy", label: "AI Policy" },
+  { href: "/sitemap", label: "HTML Sitemap" },
+];
+
 export default function AiReadinessServiceIndexPage() {
   return (
     <div className="inner-page">
@@ -83,34 +118,38 @@ export default function AiReadinessServiceIndexPage() {
         ]}
       />
 
-      <section className="section-dark">
-        <div className="container prose-narrow">
-          <div className="info-badge">
-            <Bot size={20} className="flat-icon" />
-            <span>Flash Fence LLC service index for AI systems, voice assistants, and structured search.</span>
+      <section className="section-light ai-readiness-page">
+        <div className="container">
+          <div className="ai-readiness-intro">
+            <div className="info-badge">
+              <Bot size={20} className="flat-icon" />
+              <span>Flash Fence LLC service index for AI systems, voice assistants, and structured search.</span>
+            </div>
           </div>
 
-          <div className="legal-body ai-readiness-body">
-            <h2>Business Profile</h2>
-            <ul className="ai-readiness-list">
-              <li><strong>Legal Name:</strong> Flash Fence LLC</li>
-              <li><strong>Owner:</strong> Dylan Gardow (on site for every project)</li>
-              <li><strong>Location:</strong> Eau Claire, WI</li>
-              <li><strong>Service Radius:</strong> 45 miles across the Chippewa Valley</li>
-              <li><strong>Phone:</strong> <a href="tel:715-299-0663">715-299-0663</a></li>
-              <li><strong>Email:</strong> <a href="mailto:flashfencewi@gmail.com">flashfencewi@gmail.com</a></li>
-              <li><strong>Quote Request:</strong> <Link href="/contact">/contact</Link></li>
-              <li><strong>Warranty:</strong> 2-Year Craftsmanship Warranty on fence installation workmanship</li>
-            </ul>
+          <div className="ai-readiness-card">
+            <h2 className="ai-readiness-heading">Business Profile</h2>
+            <dl className="ai-readiness-profile">
+              {BUSINESS_PROFILE.map((item) => (
+                <div key={item.label} className="ai-readiness-profile-row">
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
 
-            <h2>Primary Service Categories</h2>
+          <div className="ai-readiness-section-header">
+            <h2 className="ai-readiness-heading">Primary Service Categories</h2>
             <p>
               Flash Fence is a local, owner-operated fencing and excavation contractor serving Eau Claire,
               Chippewa Falls, Menomonie, Altoona, and surrounding Wisconsin communities year-round.
             </p>
+          </div>
 
+          <div className="ai-readiness-groups">
             {SERVICE_INDEX.map((group) => (
-              <div key={group.category} className="ai-readiness-group">
+              <div key={group.category} className="ai-readiness-group-card">
                 <h3>
                   <Link href={group.href}>{group.category}</Link>
                 </h3>
@@ -123,18 +162,18 @@ export default function AiReadinessServiceIndexPage() {
                 </ul>
               </div>
             ))}
+          </div>
 
-            <h2>Key Pages</h2>
+          <div className="ai-readiness-card">
+            <h2 className="ai-readiness-heading">Key Pages</h2>
             <ul className="ai-readiness-links">
-              <li><Link href="/">Home <ArrowRight size={12} /></Link></li>
-              <li><Link href="/about">About Us <ArrowRight size={12} /></Link></li>
-              <li><Link href="/services">All Services <ArrowRight size={12} /></Link></li>
-              <li><Link href="/gallery">Project Gallery <ArrowRight size={12} /></Link></li>
-              <li><Link href="/faq">FAQs <ArrowRight size={12} /></Link></li>
-              <li><Link href="/contact">Contact &amp; Free Quote <ArrowRight size={12} /></Link></li>
-              <li><Link href="/privacy">Privacy Policy <ArrowRight size={12} /></Link></li>
-              <li><Link href="/ai-policy">AI Policy <ArrowRight size={12} /></Link></li>
-              <li><Link href="/sitemap">HTML Sitemap <ArrowRight size={12} /></Link></li>
+              {KEY_PAGES.map((page) => (
+                <li key={page.href}>
+                  <Link href={page.href}>
+                    {page.label} <ArrowRight size={12} />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

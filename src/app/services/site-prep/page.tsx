@@ -13,9 +13,9 @@ export default function SitePrepService() {
       <PageHero
         title="Site Prep & Land Clearing"
         subtitle="Expert brush clearing, old fence demolition, and site grading. We prep the groundwork to ensure your new fence or construction layout stands on solid foundation."
-        backgroundImage="/gallery/gallery-09.png"
+        backgroundImage="/gallery/gallery-02.png"
       >
-        <div style={{ display: "flex", gap: "var(--space-md)", marginTop: "var(--space-lg)", flexWrap: "wrap" }}>
+        <div className="page-hero-actions">
           <a href="#contact" className="btn btn-primary">Start Site Prep</a>
           <Link href="/contact" className="btn btn-secondary">Request Call</Link>
         </div>
@@ -41,7 +41,6 @@ export default function SitePrepService() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
                 <div className="feature-item">
-                  <Trees size={24} className="flat-icon" />
                   <div>
                     <h3>Thick Brush &amp; Fence Line Clearing</h3>
                     <p>
@@ -51,7 +50,6 @@ export default function SitePrepService() {
                 </div>
 
                 <div className="feature-item">
-                  <Trash2 size={24} className="flat-icon" />
                   <div>
                     <h3>Old Fence Removal &amp; Demo</h3>
                     <p>
@@ -61,7 +59,6 @@ export default function SitePrepService() {
                 </div>
 
                 <div className="feature-item" style={{ borderBottom: "none" }}>
-                  <Compass size={24} className="flat-icon" />
                   <div>
                     <h3>Leveling &amp; Surface Grading</h3>
                     <p>

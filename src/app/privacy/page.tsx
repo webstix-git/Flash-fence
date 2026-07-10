@@ -1,10 +1,9 @@
-import { Shield } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function PrivacyPage() {
   return (
-    <div className="inner-page">
+    <div className="inner-page legal-page">
       <PageHero
         eyebrow="Regulatory compliance"
         title="Privacy Policy"
@@ -18,14 +17,10 @@ export default function PrivacyPage() {
         ]}
       />
 
-      <section className="section-dark">
-        <div className="container prose-narrow">
-          <div className="info-badge">
-            <Shield size={20} className="flat-icon" />
-            <span>Effective Date: July 9, 2026. Protects lead inquiries in Eau Claire, WI.</span>
-          </div>
-
-          <div className="legal-body">
+      <section className="section-light legal-page-section">
+        <div className="container">
+          <div className="legal-page-content">
+            <div className="legal-body">
             <p>
               At <strong>Flash Fence LLC</strong>, we are committed to maintaining the trust and confidence of our Chippewa Valley clients. This Privacy Policy details how we collect, store, and process your personal information when you request a free quote, call us, or interact with our digital storefront.
             </p>
@@ -67,6 +62,7 @@ export default function PrivacyPage() {
               Email: flashfencewi@gmail.com<br />
               Phone: 715-299-0663
             </p>
+          </div>
           </div>
         </div>
       </section>

@@ -13,9 +13,9 @@ export default function FencingService() {
       <PageHero
         title="Fencing Installation & Design"
         subtitle="We design and construct premium property boundaries built to secure your yard, safeguard pets, and provide absolute privacy. Dylan Gardow oversees every single post installation."
-        backgroundImage="/vinyl-fence-detail.jpg"
+        backgroundImage="/gallery/gallery-02.png"
       >
-        <div style={{ display: "flex", gap: "var(--space-md)", marginTop: "var(--space-lg)", flexWrap: "wrap" }}>
+        <div className="page-hero-actions">
           <a href="#contact" className="btn btn-primary">Get A Free Estimate</a>
           <Link href="/contact" className="btn btn-secondary">Request Call</Link>
         </div>

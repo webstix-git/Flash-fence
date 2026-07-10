@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import InnerPageCta from "@/components/InnerPageCta";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FenceTypeShowcase from "@/components/FenceTypeShowcase";
+import GalleryGrid from "@/components/GalleryGrid";
 import { GALLERY_PROJECTS } from "@/data/gallery-projects";
 
 export default function GalleryPage() {
@@ -55,36 +54,7 @@ export default function GalleryPage() {
             </button>
           </div>
 
-          <motion.div layout className="gallery-grid">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((p) => (
-                <motion.div
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  key={p.id}
-                  className={`gallery-item ${p.category === "fencing" ? "fence-item" : ""}`}
-                >
-                  <div className="gallery-image-wrapper">
-                    <Image
-                      src={p.image}
-                      alt={p.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="gallery-image"
-                      loading="lazy"
-                    />
-                    <div className="gallery-meta">
-                      <h4>{p.title}</h4>
-                      <span>{p.details}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+          <GalleryGrid projects={filteredProjects} />
         </div>
       </section>
 

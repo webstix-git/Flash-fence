@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Home, Shield, FileText, Wrench } from "lucide-react";
+import { Home, Shield, FileText, Wrench } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -12,6 +12,7 @@ export default function SitemapPage() {
         { path: "/", label: "Home Page" },
         { path: "/about", label: "About Us" },
         { path: "/gallery", label: "Project Gallery" },
+        { path: "/testimonials", label: "Customer Testimonials" },
         { path: "/faq", label: "Frequently Asked Questions" },
         { path: "/contact", label: "Contact & Quote Request" },
       ],
@@ -76,7 +77,7 @@ export default function SitemapPage() {
                   {section.links.map((link) => (
                     <li key={link.path}>
                       <Link href={link.path} className="footer-link">
-                        <ArrowRight size={12} style={{ opacity: 0.5 }} /> {link.label}
+                        {link.label}
                       </Link>
                     </li>
                   ))}

@@ -1,10 +1,9 @@
-import { Cpu } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function AiPolicyPage() {
   return (
-    <div className="inner-page">
+    <div className="inner-page legal-page">
       <PageHero
         eyebrow="Automation Transparency"
         title="AI Policy & Operations"
@@ -18,14 +17,10 @@ export default function AiPolicyPage() {
         ]}
       />
 
-      <section className="section-dark">
-        <div className="container prose-narrow">
-          <div className="info-badge">
-            <Cpu size={20} className="flat-icon" />
-            <span>Operational disclosure. Outlines AI parameters for Flash Fence LLC.</span>
-          </div>
-
-          <div className="legal-body">
+      <section className="section-light legal-page-section">
+        <div className="container">
+          <div className="legal-page-content">
+            <div className="legal-body">
             <p>
               At <strong>Flash Fence LLC</strong>, we combine old-school craftsmanship with modern digital tools. This AI Policy outlines how we utilize Artificial Intelligence systems to optimize our design layouts, communicate with customers, and manage site parameters.
             </p>
@@ -44,6 +39,7 @@ export default function AiPolicyPage() {
             <p>
               To maintain immediate responses, our system may route incoming web request data through automated triage pipelines. Dylan Gardow receives notifications via automated SMS triggers. Inquiries are managed by our core Chippewa Valley staff.
             </p>
+          </div>
           </div>
         </div>
       </section>
