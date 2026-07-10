@@ -30,6 +30,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://flashfencewi.com"),
   title: "Flash Fence | Premium Fencing & Excavation | Eau Claire, WI",
   description: "Get perfectionist quality fence installation (vinyl, wood, chain link) and reliable excavation services in Chippewa Valley. 2-Year Craftsmanship Warranty. Owner Dylan Gardow always on site.",
+  icons: {
+    icon: [{ url: "/icon.png", sizes: "32x32", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Flash Fence | Fencing & Excavation | Eau Claire, WI",
     description: "Perfectionist quality fencing & year-round excavation in Eau Claire, WI. 2-Year craftsmanship warranty. Owner Dylan Gardow always on site.",
