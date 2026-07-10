@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Home, Shield, FileText, Wrench } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -7,7 +6,6 @@ export default function SitemapPage() {
   const SITEMAP_SECTIONS = [
     {
       title: "Core Pages",
-      icon: <Home size={24} className="flat-icon" />,
       links: [
         { path: "/", label: "Home Page" },
         { path: "/about", label: "About Us" },
@@ -19,7 +17,6 @@ export default function SitemapPage() {
     },
     {
       title: "Services & Divisions",
-      icon: <Wrench size={24} className="flat-icon" />,
       links: [
         { path: "/services", label: "Service Index Dashboard" },
         { path: "/services/fencing", label: "Fencing Installation Division" },
@@ -29,7 +26,6 @@ export default function SitemapPage() {
     },
     {
       title: "Wisconsin Trade Insights (Blog)",
-      icon: <FileText size={24} className="flat-icon" />,
       links: [
         { path: "/blog", label: "Blog Index" },
         { path: "/blog/frost-lines-stability", label: "Article: Frost Lines & Fencing Stability" },
@@ -38,12 +34,11 @@ export default function SitemapPage() {
     },
     {
       title: "Policies & Disclosures",
-      icon: <Shield size={24} className="flat-icon" />,
       links: [
         { path: "/privacy", label: "Privacy Policy" },
         { path: "/ai-policy", label: "AI Policy & Operations" },
         { path: "/ai-readiness-service-index", label: "AI Readiness Service Index" },
-        { path: "/sitemap", label: "HTML Sitemap Index" },
+        { path: "/sitemap", label: "Sitemap Index" },
       ],
     },
   ];
@@ -52,7 +47,7 @@ export default function SitemapPage() {
     <div className="inner-page">
       <PageHero
         eyebrow="Route Directory"
-        title="HTML Sitemap"
+        title="Sitemap"
         subtitle="Locate any directory link across our fencing and excavation portal. Structured for search engine bots and local Chippewa Valley users."
         backgroundImage="/old-wood-fence.jpg"
       />
@@ -64,19 +59,16 @@ export default function SitemapPage() {
         ]}
       />
 
-      <section className="section-dark">
+      <section className="section-light sitemap-page-section">
         <div className="container">
-          <div className="grid-about-service">
+          <div className="sitemap-single-column">
             {SITEMAP_SECTIONS.map((section, index) => (
               <div key={index} className="sitemap-card">
-                <div className="sitemap-card-header">
-                  {section.icon}
-                  <h3>{section.title}</h3>
-                </div>
+                <h3 className="sitemap-card-title">{section.title}</h3>
                 <ul className="sitemap-links">
                   {section.links.map((link) => (
                     <li key={link.path}>
-                      <Link href={link.path} className="footer-link">
+                      <Link href={link.path} className="sitemap-link">
                         {link.label}
                       </Link>
                     </li>

@@ -2523,7 +2523,14 @@ section {
 .ai-readiness-heading {
   font-size: 1.4rem;
   margin: 0 0 var(--space-md);
+  padding-bottom: var(--space-sm);
   color: var(--color-secondary);
+  display: block;
+  width: 100%;
+}
+
+.ai-readiness-heading::after {
+  display: none;
 }
 
 .ai-readiness-section-header {
@@ -2620,8 +2627,15 @@ section {
 .ai-readiness-group-card h3 {
   font-size: 1.1rem;
   margin: 0 0 var(--space-md);
+  padding-bottom: var(--space-sm);
   color: var(--color-secondary);
   line-height: 1.3;
+  display: block;
+  width: 100%;
+}
+
+.ai-readiness-group-card h3::after {
+  display: none;
 }
 
 .ai-readiness-group-card h3 a {
@@ -3625,7 +3639,14 @@ a.contact-detail-value:hover {
 .inner-page .legal-body h2 {
   font-size: 1.25rem;
   margin: var(--space-lg) 0 var(--space-sm);
+  padding-bottom: var(--space-sm);
   color: var(--color-secondary);
+  display: block;
+  width: 100%;
+}
+
+.inner-page .legal-body h2::after {
+  display: none;
 }
 
 .inner-page .legal-body h2:first-of-type {
@@ -3741,6 +3762,48 @@ a.contact-detail-value:hover {
   background-color: var(--color-accent);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sitemap-page-section {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
+  background-color: #ffffff;
+}
+
+.sitemap-single-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sitemap-page-section .sitemap-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.sitemap-page-section .sitemap-card-title {
+  color: var(--color-secondary);
+  margin: 0 0 var(--space-md);
+  padding-bottom: var(--space-sm);
+  font-size: 1.15rem;
+}
+
+.sitemap-page-section .sitemap-card-title::after {
+  display: none;
+}
+
+.sitemap-link {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.sitemap-link:hover {
+  color: var(--color-primary);
 }
 
 .inner-page .sitemap-card-header {

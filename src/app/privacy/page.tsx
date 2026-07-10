@@ -25,7 +25,7 @@ export default function PrivacyPage() {
               At <strong>Flash Fence LLC</strong>, we are committed to maintaining the trust and confidence of our Chippewa Valley clients. This Privacy Policy details how we collect, store, and process your personal information when you request a free quote, call us, or interact with our digital storefront.
             </p>
 
-            <h2>1. Information We Collect</h2>
+            <h2 className="heading-no-accent">1. Information We Collect</h2>
             <p>
               When you submit a &quot;Get A Free Quote&quot; form, we collect information necessary to prepare your boundary estimation or groundwork layout plan. This includes:
             </p>
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
               <li>Material Preferences: Choice of vinyl, wood, or chain link boundary types.</li>
             </ul>
 
-            <h2>2. How We Use Your Information</h2>
+            <h2 className="heading-no-accent">2. How We Use Your Information</h2>
             <p>
               We utilize collected info solely to deliver professional trades work:
             </p>
@@ -48,12 +48,12 @@ export default function PrivacyPage() {
               We do **not** sell, rent, or trade your contact info to third parties for marketing purposes.
             </p>
 
-            <h2>3. Text/SMS Communications</h2>
+            <h2 className="heading-no-accent">3. Text/SMS Communications</h2>
             <p>
               By providing your telephone number on our forms, you consent to receive direct project follow-up texts from Dylan Gardow. Message and data rates may apply. You can reply &quot;STOP&quot; at any time to opt-out of SMS notifications.
             </p>
 
-            <h2>4. Contact Us</h2>
+            <h2 className="heading-no-accent">4. Contact Us</h2>
             <p>
               For privacy queries or data removal requests:
             </p>

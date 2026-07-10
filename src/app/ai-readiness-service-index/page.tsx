@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight, Bot } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -120,15 +119,8 @@ export default function AiReadinessServiceIndexPage() {
 
       <section className="section-light ai-readiness-page">
         <div className="container">
-          <div className="ai-readiness-intro">
-            <div className="info-badge">
-              <Bot size={20} className="flat-icon" />
-              <span>Flash Fence LLC service index for AI systems, voice assistants, and structured search.</span>
-            </div>
-          </div>
-
           <div className="ai-readiness-card">
-            <h2 className="ai-readiness-heading">Business Profile</h2>
+            <h2 className="ai-readiness-heading heading-no-accent">Business Profile</h2>
             <dl className="ai-readiness-profile">
               {BUSINESS_PROFILE.map((item) => (
                 <div key={item.label} className="ai-readiness-profile-row">
@@ -140,7 +132,7 @@ export default function AiReadinessServiceIndexPage() {
           </div>
 
           <div className="ai-readiness-section-header">
-            <h2 className="ai-readiness-heading">Primary Service Categories</h2>
+            <h2 className="ai-readiness-heading heading-no-accent">Primary Service Categories</h2>
             <p>
               Flash Fence is a local, owner-operated fencing and excavation contractor serving Eau Claire,
               Chippewa Falls, Menomonie, Altoona, and surrounding Wisconsin communities year-round.
@@ -150,7 +142,7 @@ export default function AiReadinessServiceIndexPage() {
           <div className="ai-readiness-groups">
             {SERVICE_INDEX.map((group) => (
               <div key={group.category} className="ai-readiness-group-card">
-                <h3>
+                <h3 className="heading-no-accent">
                   <Link href={group.href}>{group.category}</Link>
                 </h3>
                 <ul className="ai-readiness-list">
@@ -165,12 +157,12 @@ export default function AiReadinessServiceIndexPage() {
           </div>
 
           <div className="ai-readiness-card">
-            <h2 className="ai-readiness-heading">Key Pages</h2>
+            <h2 className="ai-readiness-heading heading-no-accent">Key Pages</h2>
             <ul className="ai-readiness-links">
               {KEY_PAGES.map((page) => (
                 <li key={page.href}>
                   <Link href={page.href}>
-                    {page.label} <ArrowRight size={12} />
+                    {page.label}
                   </Link>
                 </li>
               ))}
