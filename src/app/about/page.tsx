@@ -20,6 +20,7 @@ export default function About() {
   return (
     <div className="inner-page">
       <PageHero
+        eyebrow="About Flash Fence"
         title="Perfectionist Quality Built For The Chippewa Valley"
         backgroundImage="/completed-vinyl-installation.jpg"
         tall

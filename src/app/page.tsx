@@ -93,12 +93,12 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.45 }}
               className="hero-actions"
             >
-              <Link href="/contact" className="btn btn-primary">
-                Get A Free Quote
+              <Link href="/services" className="btn btn-primary">
+                Explore Our Services
                 <ArrowRight size={16} style={{ marginLeft: "var(--space-xs)" }} />
               </Link>
-              <a href="tel:715-299-0663" className="btn btn-secondary">
-                <Phone size={16} style={{ marginRight: "var(--space-xs)", color: "var(--color-primary)" }} />
+              <a href="tel:715-299-0663" className="btn btn-secondary hero-call-btn">
+                <Phone size={16} className="hero-call-icon" style={{ marginRight: "var(--space-xs)" }} />
                 Call 715-299-0663
               </a>
             </motion.div>
