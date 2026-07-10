@@ -41,6 +41,7 @@ export default function SitemapPage() {
       links: [
         { path: "/privacy", label: "Privacy Policy" },
         { path: "/ai-policy", label: "AI Policy & Operations" },
+        { path: "/ai-readiness-service-index", label: "AI Readiness Service Index" },
         { path: "/sitemap", label: "HTML Sitemap Index" },
       ],
     },

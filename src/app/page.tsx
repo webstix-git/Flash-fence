@@ -456,7 +456,7 @@ export default function Home() {
               href="https://www.google.com/search?q=flash+fence"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline-light"
+              className="btn btn-primary"
             >
               Read Google Reviews
             </a>

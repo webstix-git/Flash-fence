@@ -84,12 +84,19 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Flash Fence LLC. All rights reserved.</p>
-          <div style={{ display: "flex", gap: "var(--space-md)", flexWrap: "wrap" }}>
-            <Link href="/privacy" className="footer-link" style={{ fontSize: "0.8rem" }}>Privacy Policy</Link>
-            <Link href="/ai-policy" className="footer-link" style={{ fontSize: "0.8rem" }}>AI Policy</Link>
-            <Link href="/sitemap" className="footer-link" style={{ fontSize: "0.8rem" }}>Sitemap</Link>
-          </div>
+          <p className="footer-copyright">
+            <span>&copy; {new Date().getFullYear()} Flash Fence LLC. All rights reserved.</span>
+            <span className="footer-copyright-sep" aria-hidden="true">|</span>
+            <Link href="/sitemap" className="footer-copyright-link">Sitemap</Link>
+            <span className="footer-copyright-sep" aria-hidden="true">|</span>
+            <Link href="/privacy" className="footer-copyright-link">Privacy Policy</Link>
+            <span className="footer-copyright-sep" aria-hidden="true">|</span>
+            <Link href="/ai-policy" className="footer-copyright-link">AI Policy</Link>
+            <span className="footer-copyright-sep" aria-hidden="true">|</span>
+            <Link href="/ai-readiness-service-index" className="footer-copyright-link">
+              AI Readiness Service Index
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
