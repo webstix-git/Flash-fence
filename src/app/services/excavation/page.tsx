@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BrushCleaning, LandPlot, Cable } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -84,27 +83,18 @@ export default function ExcavationService() {
             <h2 className="heading-no-accent">Complete Excavation Scope</h2>
           </div>
 
-          <div className="services-grid service-cards-home">
+          <div className="services-grid service-detail-cards">
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <BrushCleaning size={24} />
-              </div>
               <h3>Land &amp; Brush Clearing</h3>
               <p>Removing thick vegetation, storm debris, small trees, and stubborn stumps. Prepares clean layouts for fences or structures.</p>
             </div>
 
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <LandPlot size={24} />
-              </div>
               <h3>Sub-Grade Compact</h3>
               <p>Thorough soil compaction and gravel grading to establish stable drainage layers before pouring concrete or asphalt.</p>
             </div>
 
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <Cable size={24} />
-              </div>
               <h3>Utility Trenching</h3>
               <p>Digging out sewer, water, and electrical conduit lines. Insulated trenching set below frost lines for maximum safety.</p>
             </div>

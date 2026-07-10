@@ -28,7 +28,7 @@ export default function Footer() {
               style={{ width: "auto", height: "45px", objectFit: "contain" }}
             />
             <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.6)", marginTop: "var(--space-sm)" }}>
-              Professional fencing installation and site excavation trades based in Eau Claire, WI. Dylan Gardow, Owner.
+              Professional fencing installation and site excavation trades based in Eau Claire, WI.
             </p>
             <div className="footer-social">
               <span className="footer-social-label">Follow Us On</span>

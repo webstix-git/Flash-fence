@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ShieldCheck, Hammer, Wrench, MapPin, Layers, DoorOpen } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -41,7 +40,6 @@ export default function FencingService() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
                 <div className="feature-item">
-                  <ShieldCheck size={24} className="flat-icon" />
                   <div>
                     <h3>Premium Vinyl Privacy</h3>
                     <p>
@@ -51,7 +49,6 @@ export default function FencingService() {
                 </div>
 
                 <div className="feature-item">
-                  <Hammer size={24} className="flat-icon" />
                   <div>
                     <h3>Custom Wood Picket &amp; Privacy</h3>
                     <p>
@@ -61,7 +58,6 @@ export default function FencingService() {
                 </div>
 
                 <div className="feature-item" style={{ borderBottom: "none" }}>
-                  <Wrench size={24} className="flat-icon" />
                   <div>
                     <h3>Chain Link &amp; Ornamental Steel</h3>
                     <p>
@@ -96,27 +92,18 @@ export default function FencingService() {
             <h2 className="heading-no-accent">Complete Fencing Scope</h2>
           </div>
 
-          <div className="services-grid service-cards-home">
+          <div className="services-grid service-detail-cards">
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <ShieldCheck size={24} />
-              </div>
               <h3>Premium Vinyl Privacy</h3>
               <p>Engineered vinyl pickets and posts that require zero painting. They resist extreme winds, moisture, and fading.</p>
             </div>
 
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <Hammer size={24} />
-              </div>
               <h3>Custom Wood Picket &amp; Privacy</h3>
               <p>Constructed on-site from premium cedar or pressure-treated boards tailored to your yard&apos;s natural slope.</p>
             </div>
 
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <Wrench size={24} />
-              </div>
               <h3>Chain Link &amp; Ornamental Steel</h3>
               <p>High-strength galvanized or black vinyl-coated chain link alongside premium ornamental steel pickets.</p>
             </div>
@@ -152,7 +139,6 @@ export default function FencingService() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
                 <div className="feature-item">
-                  <Layers size={24} className="flat-icon" />
                   <div>
                     <h3>Post Depth &amp; Footings</h3>
                     <p>
@@ -162,7 +148,6 @@ export default function FencingService() {
                 </div>
 
                 <div className="feature-item">
-                  <MapPin size={24} className="flat-icon" />
                   <div>
                     <h3>Layout Before We Dig</h3>
                     <p>
@@ -172,7 +157,6 @@ export default function FencingService() {
                 </div>
 
                 <div className="feature-item" style={{ borderBottom: "none" }}>
-                  <DoorOpen size={24} className="flat-icon" />
                   <div>
                     <h3>Gates &amp; Hardware</h3>
                     <p>

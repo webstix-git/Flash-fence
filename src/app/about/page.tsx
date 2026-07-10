@@ -83,7 +83,7 @@ export default function About() {
           <div className="services-grid service-cards-home">
             <div className="service-card service-card-dark">
               <div className="service-icon-box">
-                <ShieldCheck size={24} />
+                <ShieldCheck size={40} />
               </div>
               <h3>2-Year Workmanship Warranty</h3>
               <p>
@@ -93,7 +93,7 @@ export default function About() {
 
             <div className="service-card service-card-dark">
               <div className="service-icon-box">
-                <Award size={24} />
+                <Award size={40} />
               </div>
               <h3>Perfectionist Standards</h3>
               <p>
@@ -103,7 +103,7 @@ export default function About() {
 
             <div className="service-card service-card-dark">
               <div className="service-icon-box">
-                <UserCheck size={24} />
+                <UserCheck size={40} />
               </div>
               <h3>Wisconsin Born & Bred</h3>
               <p>

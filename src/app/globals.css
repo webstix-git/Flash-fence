@@ -1545,6 +1545,40 @@ section {
   background-color: var(--color-secondary);
 }
 
+/* Service detail pages — icon-free cards */
+.service-detail-cards {
+  margin-top: 0;
+  align-items: stretch;
+}
+
+.service-detail-cards .service-card {
+  padding: 1.75rem 1.5rem;
+  gap: var(--space-sm);
+  min-height: 100%;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-detail-cards .service-card h3 {
+  margin: 0 0 var(--space-sm);
+  padding-top: 0;
+  line-height: 1.3;
+}
+
+.service-detail-cards .service-card p {
+  margin: 0;
+  flex: 1;
+}
+
+.service-detail-cards .service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
+
+.service-detail-cards .service-card-dark:hover {
+  background-color: var(--color-secondary);
+}
+
 .section-light .service-cards-home .service-card:not(.service-card-dark) p {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -3394,6 +3428,8 @@ a.contact-detail-value:hover {
   color: var(--color-primary);
   flex-shrink: 0;
   margin-top: 2px;
+  width: 40px;
+  height: 40px;
 }
 
 .inner-page .feature-item {
@@ -3415,8 +3451,8 @@ a.contact-detail-value:hover {
 }
 
 .inner-page .service-icon-box {
-  width: auto;
-  height: auto;
+  width: 40px;
+  height: 40px;
   margin-bottom: var(--space-md);
   padding: 0;
   border: none;
@@ -3425,6 +3461,11 @@ a.contact-detail-value:hover {
   align-self: flex-start;
   justify-content: flex-start;
   color: var(--color-primary);
+}
+
+.inner-page .service-icon-box svg {
+  width: 40px;
+  height: 40px;
 }
 
 .inner-page .section-light + .section-dark,

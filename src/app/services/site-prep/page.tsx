@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Trees, Compass, Trash2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -93,27 +92,18 @@ export default function SitePrepService() {
             <h2 className="heading-no-accent">Complete Land Clearing Services</h2>
           </div>
 
-          <div className="services-grid service-cards-home">
+          <div className="services-grid service-detail-cards">
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <Trees size={24} />
-              </div>
               <h3>Thick Brush &amp; Fence Line Clearing</h3>
               <p>We clear dense woods, wild growth, and branches along property borders to open up layout space for post placement.</p>
             </div>
 
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <Trash2 size={24} />
-              </div>
               <h3>Old Fence Removal &amp; Demo</h3>
               <p>Demolishing weathered wood fences, chain link layouts, or concrete footings, hauling away debris, and filling empty holes.</p>
             </div>
 
             <div className="service-card service-card-dark">
-              <div className="service-icon-box">
-                <Compass size={24} />
-              </div>
               <h3>Leveling &amp; Surface Grading</h3>
               <p>Minor slope contouring and leveling of topsoil to establish proper yard drainage and smooth post transitions.</p>
             </div>
