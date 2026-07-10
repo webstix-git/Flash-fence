@@ -12,9 +12,9 @@ import {
   Star,
   Layers,
   Hammer,
-  Truck,
+  BrushCleaning,
+  LandPlot,
   Wrench,
-  Trees,
   CheckCircle
 } from "lucide-react";
 import { GALLERY_PROJECTS } from "@/data/gallery-projects";
@@ -275,7 +275,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <div className="service-icon-box">
-                <Trees size={24} />
+                <BrushCleaning size={24} />
               </div>
               <h3>Land Clearing &amp; Storm Prep</h3>
               <p>Removing thick brush, small trees, storm damage, and old fencing. Clean line prep for property development.</p>
@@ -287,7 +287,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <div className="service-icon-box">
-                <Truck size={24} />
+                <LandPlot size={24} />
               </div>
               <h3>Site &amp; Concrete Prep</h3>
               <p>Grading, soil compaction, and digging out sub-bases for concrete pads, patios, driveways, or fence lines.</p>
@@ -453,7 +453,7 @@ export default function Home() {
 
           <div className="reviews-actions">
             <a
-              href="https://www.google.com"
+              href="https://www.google.com/search?q=flash+fence"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-light"
@@ -461,7 +461,7 @@ export default function Home() {
               Read Google Reviews
             </a>
             <a
-              href="https://www.angi.com"
+              href="https://www.angi.com/companylist/us/wi/eau-claire/flash-fence-llc-reviews-1.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-light"

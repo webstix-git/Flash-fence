@@ -6,8 +6,8 @@ import {
   ShieldCheck,
   Hammer,
   Wrench,
-  Trees,
-  Truck,
+  BrushCleaning,
+  LandPlot,
   Layers,
   ArrowRight,
 } from "lucide-react";
@@ -139,7 +139,7 @@ export default function ServicesIndex() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <div className="service-icon-box">
-                <Trees size={24} />
+                <BrushCleaning size={24} />
               </div>
               <h3>Land Clearing &amp; Storm Prep</h3>
               <p>Removing thick brush, small trees, storm damage, and old fencing. Clean line prep for property development.</p>
@@ -151,7 +151,7 @@ export default function ServicesIndex() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <div className="service-icon-box">
-                <Truck size={24} />
+                <LandPlot size={24} />
               </div>
               <h3>Site &amp; Concrete Prep</h3>
               <p>Grading, soil compaction, and digging out sub-bases for concrete pads, patios, driveways, or fence lines.</p>
