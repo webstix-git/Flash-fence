@@ -51,7 +51,7 @@ export default function ServicesIndex() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Premium Fencing</h3>
                 <p className="pillar-desc">
-                  Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, and ornamental steel.
+                  Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, steel, and aluminum.
                 </p>
                 <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
@@ -61,8 +61,8 @@ export default function ServicesIndex() {
 
             <div className="pillar-card">
               <Image
-                src="/old-wood-fence.jpg"
-                alt="Excavation and groundwork preparation"
+                src="/site-excavation.jpg"
+                alt="Site excavation and grading preparation"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="pillar-bg"
@@ -70,7 +70,7 @@ export default function ServicesIndex() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Site Excavation</h3>
                 <p className="pillar-desc">
-                  Year-round groundwork, lot clearing, fence line prep, minor demolition, and concrete sub-base preparation built to withstand frost.
+                  Year-round excavation, lot clearing, fence line prep, minor demolition, and concrete grading and prep work built to handle Wisconsin&apos;s toughest seasons.
                 </p>
                 <Link href="/services/excavation" className="btn btn-secondary btn-compact">
                   View Excavation Services
@@ -114,8 +114,8 @@ export default function ServicesIndex() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <h3>Chain Link &amp; Ornamental</h3>
-              <p>Industrial galvanized or black vinyl-coated chain link for security, and high-strength ornamental steel fencing.</p>
+              <h3>Chain Link, Steel &amp; Aluminum</h3>
+              <p>Industrial galvanized or black vinyl-coated chain link for security, plus steel and aluminum fencing options.</p>
               <Link href="/services/fencing" className="blog-link">
                 Learn More <ArrowRight size={14} />
               </Link>
@@ -133,7 +133,7 @@ export default function ServicesIndex() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Site &amp; Concrete Prep</h3>
-              <p>Grading, soil compaction, and digging out sub-bases for concrete pads, patios, driveways, or fence lines.</p>
+              <p>Concrete grading and prep work, soil compaction, and digging out sub-bases for pads, patios, driveways, or fence lines.</p>
               <Link href="/services/excavation" className="blog-link">
                 Learn More <ArrowRight size={14} />
               </Link>

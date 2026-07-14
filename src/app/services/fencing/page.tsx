@@ -35,7 +35,7 @@ export default function FencingService() {
               <span className="text-mono">Product Offerings</span>
               <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Fencing Built For Performance</h2>
               <p>
-                We construct boundaries that endure Wisconsin&apos;s extreme weather shifts. Every post hole is dug to deep industrial standards, set below the frost lines, and filled using commercial-grade techniques to prevent shifting or listing.
+                We build durable boundaries designed for Wisconsin conditions. Every post is properly set with careful preparation and proven installation methods to help ensure long-lasting stability.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
@@ -61,7 +61,7 @@ export default function FencingService() {
                   <div>
                     <h3>Chain Link &amp; Ornamental Steel</h3>
                     <p>
-                      High-strength galvanized or black vinyl-coated chain link for secure property lines, alongside premium ornamental steel pickets for estate boundaries and commercial curb appeal.
+                      High-strength galvanized or black vinyl-coated chain link for secure property lines, alongside steel and aluminum fencing for estate boundaries and commercial curb appeal.
                     </p>
                   </div>
                 </div>
@@ -70,8 +70,8 @@ export default function FencingService() {
 
             <div className="why-image-panel why-image-panel--fit">
               <Image
-                src="/gallery/gallery-06.png"
-                alt="Completed vinyl fencing project"
+                src="/fencing-vinyl-install.jpg"
+                alt="White vinyl privacy fence installation"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
@@ -104,8 +104,8 @@ export default function FencingService() {
             </div>
 
             <div className="service-card service-card-dark">
-              <h3>Chain Link &amp; Ornamental Steel</h3>
-              <p>High-strength galvanized or black vinyl-coated chain link alongside premium ornamental steel pickets.</p>
+              <h3>Chain Link, Steel &amp; Aluminum</h3>
+              <p>High-strength galvanized or black vinyl-coated chain link alongside steel and aluminum fencing options.</p>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function FencingService() {
                 style={{ objectFit: "cover" }}
               />
               <div className="why-image-caption">
-                <h4>Layout first. Dig second.</h4>
+                <h4>Layout first. Build second.</h4>
                 <p>Every job gets a walk-through on site before posts go in, including corners, gates, and slopes.</p>
               </div>
             </div>
@@ -134,24 +134,15 @@ export default function FencingService() {
                 How Your Fence Gets Built
               </h2>
               <p>
-                A fence that lasts in Wisconsin starts with what happens underground. We dig every structural post hole to 48 inches, place the footing below the frost line, and backfill with drainage aggregate so posts are not heaving out of the ground come spring.
+                A fence that lasts in Wisconsin starts with posts set the right way. We pound posts in properly and use concrete on needed structural posts so the fence stays straight and solid for years to come.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
                 <div className="feature-item">
                   <div>
-                    <h3>Post Depth &amp; Footings</h3>
+                    <h3>Layout Before We Build</h3>
                     <p>
-                      Structural posts are set 48 inches deep with concrete footings placed below the local frost line. That is the difference between a fence that stays straight for years and one that lists after the first hard winter.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="feature-item">
-                  <div>
-                    <h3>Layout Before We Dig</h3>
-                    <p>
-                      Dylan walks the property line with you before a single hole is drilled. Corners, gate swings, slope changes, and utility clearances get marked out upfront so the finished layout matches what you approved.
+                      Dylan walks the property line with you before posts go in. Corners, gate swings, slope changes, and utility clearances get marked out upfront so the finished layout matches what you approved.
                     </p>
                   </div>
                 </div>

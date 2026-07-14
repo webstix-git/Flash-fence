@@ -101,8 +101,8 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="why-stat-value">365</div>
-                  <div className="why-stat-title">Year-Round Excavation</div>
-                  <p className="why-stat-desc">Site work you can count on through every Wisconsin season.</p>
+                  <div className="why-stat-title">Willing to Work Year-Round</div>
+                  <p className="why-stat-desc">Committed to getting the job done through Wisconsin&apos;s toughest seasons.</p>
                 </div>
                 <div>
                   <div className="why-stat-value">45MI</div>
@@ -122,7 +122,7 @@ export default function Home() {
               />
               <div className="why-image-caption">
                 <h4>Materials staged, job ready.</h4>
-                <p>Organized sites, tidy finishes, the way we&apos;d want it done at our own place.</p>
+                <p>Organized sites, professional finishes, the way we&apos;d want it done at our own place.</p>
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function Home() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Premium Fencing</h3>
                 <p className="pillar-desc">
-                  Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, and ornamental steel.
+                  Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, steel, and aluminum.
                 </p>
                 <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
@@ -169,8 +169,8 @@ export default function Home() {
             {/* Pillar 2: Excavation */}
             <div className="pillar-card">
               <Image
-                src="/old-wood-fence.jpg"
-                alt="Excavation and groundwork preparation"
+                src="/site-excavation.jpg"
+                alt="Site excavation and grading preparation"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="pillar-bg"
@@ -178,7 +178,7 @@ export default function Home() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Site Excavation</h3>
                 <p className="pillar-desc">
-                  Year-round groundwork, lot clearing, fence line prep, minor demolition, and concrete sub-base preparation built to withstand frost.
+                  Year-round excavation, lot clearing, fence line prep, minor demolition, and concrete grading and prep work built to handle Wisconsin&apos;s toughest seasons.
                 </p>
                 <Link href="/services/excavation" className="btn btn-secondary btn-compact">
                   View Excavation Services
@@ -199,7 +199,7 @@ export default function Home() {
             <span className="text-mono">What We Do</span>
             <h2>One Shop. Fence &amp; Ground.</h2>
             <p>
-              From custom fence installation to year-round excavation and site prep, we handle your exterior projects with industrial-grade precision, all under one owner-supervised crew.
+              From custom fence installation to year-round excavation and site prep, we handle your exterior projects with precision, all under one owner-supervised crew.
             </p>
           </div>
 
@@ -224,8 +224,8 @@ export default function Home() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <h3>Chain Link &amp; Ornamental</h3>
-              <p>Industrial galvanized or black vinyl-coated chain link for security, and high-strength ornamental steel fencing.</p>
+              <h3>Chain Link, Steel &amp; Aluminum</h3>
+              <p>Industrial galvanized or black vinyl-coated chain link for security, plus steel and aluminum fencing options.</p>
               <Link href="/services/fencing" className="blog-link">
                 Learn More <ArrowRight size={14} />
               </Link>
@@ -243,7 +243,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Site &amp; Concrete Prep</h3>
-              <p>Grading, soil compaction, and digging out sub-bases for concrete pads, patios, driveways, or fence lines.</p>
+              <p>Concrete grading and prep work, soil compaction, and digging out sub-bases for pads, patios, driveways, or fence lines.</p>
               <Link href="/services/excavation" className="blog-link">
                 Learn More <ArrowRight size={14} />
               </Link>

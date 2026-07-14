@@ -46,7 +46,7 @@ export default function About() {
                 In the modern contracting industry, it is far too common for business owners to sell a job and then pass it off to sub-contractors or unsupervised crews. Dylan Gardow built Flash Fence to break that cycle. 
               </p>
               <p>
-                <strong>Dylan is always on site.</strong> From laying out the post boundaries to driving the post holes and setting structural vinyl and wood pickets, Dylan leads the installation himself. This hands-on management guarantees that no corners are cut, post depths meet frost constraints, and the site is left immaculate.
+                <strong>Dylan is always on site.</strong> From laying out the property boundaries to pounding posts and setting vinyl and wood pickets, Dylan leads the installation himself. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
               </p>
               <p>
                 Our reputation is anchored in precision. We refuse to run cluttered layouts or deliver subpar results, utilizing project photos of our actual installations rather than generic stock imagery.
@@ -97,7 +97,7 @@ export default function About() {
               </div>
               <h3>Perfectionist Standards</h3>
               <p>
-                From custom setting post holes to dealing with tough Wisconsin soil elevations, we ensure every post cap is level and every rail is locked securely.
+                From setting posts properly to dealing with tough Wisconsin soil elevations, we ensure every post cap is level and every rail is locked securely.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ export default function About() {
               </div>
               <h3>Wisconsin Born & Bred</h3>
               <p>
-                We know local property boundaries, pet safety guidelines, Chippewa Valley frost depths, and building codes. We are a part of the local Eau Claire community.
+                We know local property boundaries, pet safety guidelines, Chippewa Valley building codes, and what it takes to build out here. We are a part of the local Eau Claire community.
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function About() {
               />
               <div className="why-image-caption">
                 <h4>Local crews, local knowledge.</h4>
-                <p>We know Wisconsin frost depths, soil conditions, and property lines because we live here too.</p>
+                <p>We know Wisconsin soil conditions and property lines because we live here too.</p>
               </div>
             </div>
           </div>

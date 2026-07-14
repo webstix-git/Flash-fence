@@ -11,7 +11,7 @@ export default function ExcavationService() {
     <div className="inner-page">
       <PageHero
         title="Site Excavation & Groundwork"
-        subtitle="Reliable, year-round digging, grading, line clearing, and storm cleanup. We bring high-performance machinery to handle heavy sub-base preparation for Wisconsin homeowners and builders."
+        subtitle="Reliable, year-round land clearing, grading, and site preparation. We bring the right equipment to handle everything from property clearing to heavy sub-base preparation for Wisconsin homeowners and builders."
         backgroundImage="/gallery/gallery-02.png"
       >
         <div className="page-hero-actions">
@@ -33,26 +33,17 @@ export default function ExcavationService() {
           <div className="grid-service-fencing" style={{ alignItems: "center" }}>
             <div>
               <span className="text-mono">Sub-Grade Quality</span>
-              <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Groundwork Designed For Frost Resilience</h2>
+              <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Groundwork Prepared the Right Way</h2>
               <p>
-                In Wisconsin, soil shifts and frost heaves are the primary cause of structural damage. Our excavation team makes sure that all bases are dug deep, backfilled with appropriate drainage aggregate, and thoroughly compacted.
+                Quality site preparation starts with proper excavation, accurate grading, and the right approach for each project. We dig correctly, prepare the base, and use proven systems when needed to handle Wisconsin conditions.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
-                <div className="feature-item">
-                  <div>
-                    <h3>Concrete sub-base preparation</h3>
-                    <p>
-                      Precision grading, compaction, and digging out sub-bases for patios, driveways, slab foundations, and fence layouts.
-                    </p>
-                  </div>
-                </div>
-
                 <div className="feature-item" style={{ borderBottom: "none" }}>
                   <div>
-                    <h3>Demolition &amp; Land Clearing</h3>
+                    <h3>Concrete grading and prep work</h3>
                     <p>
-                      Removing old fencing, breaking concrete pads, brush clearing, and trenching for utility water/sewer line prep.
+                      Precision grading, compaction, and digging out sub-bases for patios, driveways, slab foundations, and fence layouts.
                     </p>
                   </div>
                 </div>
@@ -61,15 +52,15 @@ export default function ExcavationService() {
 
             <div className="why-image-panel" style={{ aspectRatio: "4 / 3", minHeight: "auto" }}>
               <Image
-                src="/gallery/gallery-10.png"
-                alt="Excavation site preparation"
+                src="/excavation-site-prep.jpg"
+                alt="Site preparation and grading for excavation work"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
               <div className="why-image-caption">
-                <h4>Year-round excavation capability.</h4>
-                <p>We handle sub-grade prep, trenching, and land clearing through every Wisconsin season.</p>
+                <h4>Ready when your project is.</h4>
+                <p>We handle site preparation and land clearing year-round whenever your project needs it.</p>
               </div>
             </div>
           </div>

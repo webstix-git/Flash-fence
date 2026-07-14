@@ -29,13 +29,6 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     details: "Backyard boundary with garden features and mature landscaping.",
   },
   {
-    id: 4,
-    title: "Custom Gate & Stone Walkway",
-    category: "fencing",
-    image: "/gallery/gallery-04.png",
-    details: "Flagstone path leading to a reinforced wooden privacy gate.",
-  },
-  {
     id: 5,
     title: "White Vinyl Yard Enclosure",
     category: "fencing",
@@ -58,10 +51,10 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
   },
   {
     id: 8,
-    title: "Bobcat Site Grading",
+    title: "Site Grading",
     category: "excavation",
     image: "/gallery/gallery-08.png",
-    details: "Compact track loader leveling soil for sub-base preparation.",
+    details: "Soil leveling and grading for sub-base preparation.",
   },
   {
     id: 9,

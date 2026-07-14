@@ -825,10 +825,11 @@ section {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(var(--color-secondary-rgb), 0.97) 0%,
-    rgba(var(--color-secondary-rgb), 0.85) 25%,
-    rgba(var(--color-secondary-rgb), 0.5) 50%,
-    rgba(var(--color-secondary-rgb), 0.15) 75%,
+    rgba(var(--color-secondary-rgb), 0.98) 0%,
+    rgba(var(--color-secondary-rgb), 0.94) 28%,
+    rgba(var(--color-secondary-rgb), 0.78) 48%,
+    rgba(var(--color-secondary-rgb), 0.4) 68%,
+    rgba(var(--color-secondary-rgb), 0.12) 82%,
     transparent 100%
   );
   z-index: 1;
@@ -845,17 +846,20 @@ section {
 .pillar-content {
   position: relative;
   z-index: 2;
+  max-width: 100%;
 }
 
 .pillar-title {
   font-size: 2rem;
   margin-bottom: var(--space-sm);
-  color: var(--color-contrast);
+  color: #ffffff;
 }
 
 .pillar-desc {
   margin-bottom: var(--space-lg);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 /* Why Flash Fence — split layout */
