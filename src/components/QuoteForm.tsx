@@ -46,7 +46,7 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
 
       if (res.ok) {
         setStatus("success");
-        setFeedbackMessage(data.message || "Your quote request has been sent! Owner Dylan Gardow will text or call you shortly.");
+        setFeedbackMessage(data.message || "Your quote request has been sent! I will text or call you shortly.");
         // Reset form
         setFormData({
           name: "",
@@ -91,7 +91,7 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
         <span className="text-mono">Fast Quote Request</span>
         <h3 className="form-card-title">Get Your Free Estimate</h3>
         <p className="form-card-subtext">
-          Dylan Gardow will receive an SMS alert instantly and get back to you shortly.
+          I will receive an SMS alert instantly and get back to you shortly.
         </p>
       </div>
 

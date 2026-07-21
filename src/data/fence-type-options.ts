@@ -27,14 +27,19 @@ export const FENCE_TYPE_OPTIONS: FenceTypeOption[] = [
         swatch: "#FFFFFF",
       },
       {
-        name: "Almond",
-        image: "/gallery/fencing/vinyl-almond.png",
-        swatch: "#E8DCC8",
+        name: "Tan",
+        image: "/gallery/fencing/vinyl-tan.png",
+        swatch: "#D2B48C",
       },
       {
-        name: "Slate Grey",
-        image: "/gallery/fencing/vinyl-slate-grey.png",
-        swatch: "#5C5C5C",
+        name: "Clay",
+        image: "/gallery/fencing/vinyl-clay.png",
+        swatch: "#B8956C",
+      },
+      {
+        name: "Gray",
+        image: "/gallery/fencing/vinyl-gray.png",
+        swatch: "#8A8A8A",
       },
     ],
   },
@@ -43,15 +48,15 @@ export const FENCE_TYPE_OPTIONS: FenceTypeOption[] = [
     label: "Wood Fencing",
     summary:
       "Custom cedar and pressure-treated wood fences built on site to follow your yard grade. Stain and board spacing are laid out with you before install.",
-    image: "/gallery/gallery-03.png",
-    finishes: ["Cedar Privacy", "Pressure-Treated Picket", "Post & Rail"],
+    image: "/gallery/fencing/wood-privacy.png",
+    finishes: ["Western Red Cedar", "Pressure Treated Pine", "Post & Rail"],
   },
   {
     id: "chainlink",
     label: "Chain Link & Ornamental",
     summary:
-      "Secure perimeter fencing in galvanized or black vinyl-coated chain link, plus ornamental steel pickets for estate and commercial layouts.",
-    image: "/gallery/gallery-04.png",
-    finishes: ["Galvanized Chain Link", "Black Vinyl-Coated", "Ornamental Steel"],
+      "Secure perimeter fencing in galvanized or black or green vinyl-coated chain link, plus ornamental steel pickets for estate and commercial layouts.",
+    image: "/gallery/fencing/chain-link-black.png",
+    finishes: ["Galvanized Chain Link", "Black or green vinyl-coated", "Ornamental Steel"],
   },
 ];

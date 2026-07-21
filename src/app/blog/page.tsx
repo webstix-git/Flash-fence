@@ -28,21 +28,21 @@ export default function BlogIndex() {
           <div className="blog-grid">
             <article className="blog-card">
               <div className="blog-header" style={{ position: "relative", height: "240px" }}>
-                <span className="blog-tag">Fencing Value</span>
+                <span className="blog-tag">Fencing Guidance</span>
                 <Image
                   src="/completed-vinyl-installation.jpg"
-                  alt="Premium vinyl fence in Eau Claire backyard"
+                  alt="Choosing the right fence for your family"
                   fill
                   style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="blog-body">
-                <span className="blog-meta-info">July 2026 | By Dylan Gardow</span>
-                <h3 className="blog-title">How Frost Lines Affect Fence Post Stability in Wisconsin</h3>
+                <span className="blog-meta-info">July 2026</span>
+                <h3 className="blog-title">How to Choose the Right Fencing for Your Family&apos;s Needs</h3>
                 <p className="blog-desc">
-                  Setting posts below the 4-foot frost line is crucial in Eau Claire. Learn how our perfectionist setting methods prevent winter frost heave...
+                  Privacy, pets, kids, and curb appeal all matter. Learn how to match fence style and material to the way your family uses the yard...
                 </p>
-                <Link href="/blog/frost-lines-stability" className="blog-link">
+                <Link href="/blog/choose-right-fencing" className="blog-link">
                   Read Article <ArrowRight size={14} />
                 </Link>
               </div>
@@ -52,19 +52,41 @@ export default function BlogIndex() {
               <div className="blog-header" style={{ position: "relative", height: "240px" }}>
                 <span className="blog-tag">Site Prep</span>
                 <Image
-                  src="/old-wood-fence.jpg"
-                  alt="Clear site preparation for fencing"
+                  src="/site-excavation.jpg"
+                  alt="Proper site preparation that saves money"
                   fill
                   style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="blog-body">
-                <span className="blog-meta-info">June 2026 | By Dylan Gardow</span>
-                <h3 className="blog-title">Why Groundwork &amp; Site Prep dictates Your Fence Lifetime</h3>
+                <span className="blog-meta-info">July 2026</span>
+                <h3 className="blog-title">How the Proper Site Prep Can Save You Money</h3>
                 <p className="blog-desc">
-                  Proper land clearing and excavation is essential before fence layout. Discover how proper drainage and clearing secures your boundary...
+                  Clearing and grading done right up front helps prevent delays, rework, and expensive corrections later in the project...
                 </p>
-                <Link href="/blog/groundwork-dictates-lifetime" className="blog-link">
+                <Link href="/blog/proper-site-prep-saves-money" className="blog-link">
+                  Read Article <ArrowRight size={14} />
+                </Link>
+              </div>
+            </article>
+
+            <article className="blog-card">
+              <div className="blog-header" style={{ position: "relative", height: "240px" }}>
+                <span className="blog-tag">Home Value</span>
+                <Image
+                  src="/fencing-vinyl-install.jpg"
+                  alt="New fence that increases home value"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="blog-body">
+                <span className="blog-meta-info">July 2026</span>
+                <h3 className="blog-title">How to Increase Home Value With a New Fence</h3>
+                <p className="blog-desc">
+                  A well-built fence improves curb appeal, defines usable outdoor space, and helps a property feel finished to buyers...
+                </p>
+                <Link href="/blog/increase-home-value-with-fence" className="blog-link">
                   Read Article <ArrowRight size={14} />
                 </Link>
               </div>

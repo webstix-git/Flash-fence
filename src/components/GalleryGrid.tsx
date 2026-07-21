@@ -81,9 +81,6 @@ export default function GalleryGrid({ projects }: GalleryGridProps) {
                     className="gallery-image"
                     loading="lazy"
                   />
-                  <div className="gallery-meta">
-                    <h4>{project.title}</h4>
-                  </div>
                 </div>
               </button>
             </motion.div>
@@ -152,9 +149,6 @@ export default function GalleryGrid({ projects }: GalleryGridProps) {
                 />
               </div>
 
-              <div className="gallery-lightbox-caption">
-                <h3>{activeProject.title}</h3>
-              </div>
             </motion.div>
           </motion.div>
         )}

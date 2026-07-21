@@ -28,8 +28,9 @@ export default function SitemapPage() {
       title: "Wisconsin Trade Insights (Blog)",
       links: [
         { path: "/blog", label: "Blog Index" },
-        { path: "/blog/frost-lines-stability", label: "Article: Frost Lines & Fencing Stability" },
-        { path: "/blog/groundwork-dictates-lifetime", label: "Article: Site Prep & Boundary Longevity" },
+        { path: "/blog/choose-right-fencing", label: "Article: Choosing the Right Fencing" },
+        { path: "/blog/proper-site-prep-saves-money", label: "Article: Proper Site Prep Saves Money" },
+        { path: "/blog/increase-home-value-with-fence", label: "Article: Increase Home Value With a Fence" },
       ],
     },
     {

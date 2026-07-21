@@ -4,7 +4,6 @@ import { useState } from "react";
 import InnerPageCta from "@/components/InnerPageCta";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import FenceTypeShowcase from "@/components/FenceTypeShowcase";
 import GalleryGrid from "@/components/GalleryGrid";
 import { GALLERY_PROJECTS } from "@/data/gallery-projects";
 
@@ -18,9 +17,7 @@ export default function GalleryPage() {
   return (
     <div className="inner-page">
       <PageHero
-        eyebrow="Completed Work"
-        title="Project Gallery"
-        subtitle="Browse our real on-site photography. We never use stock photos of owners or fake projects."
+        title="Photo Gallery"
         backgroundImage="/gallery/gallery-02.png"
       />
 
@@ -58,11 +55,9 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <FenceTypeShowcase />
-
       <InnerPageCta
         title="Like what you see?"
-        description="Let Dylan Gardow inspect your property lines and determine optimal fence post placement. Complete our free estimate form today."
+        description="Let us inspect your property lines and determine an optimal fence layout and old fence removal plan. Complete our free estimate form today."
       />
     </div>
   );

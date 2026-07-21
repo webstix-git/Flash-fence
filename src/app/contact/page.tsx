@@ -11,7 +11,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in Touch"
         title="Contact Flash Fence"
-        subtitle="Whether you need a new vinyl privacy fence or small lot excavation, Dylan Gardow's team delivers perfectionist trades work."
+        subtitle="Whether you need a new vinyl privacy fence or small lot excavation, we deliver perfectionist trades work."
         backgroundImage="/vinyl-fence-detail.jpg"
       />
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
               <span className="text-mono">Contact Info</span>
               <h2 className="heading-no-accent contact-info-heading">Reach Out Any Time.</h2>
               <p className="contact-info-intro">
-                Prefer to call or email directly? Dylan Gardow responds to every inquiry personally, usually the same day.
+                Prefer to call or email directly? I respond to every inquiry personally, usually the same day.
               </p>
 
               <div className="contact-info-cards">
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     <div className="contact-hours">
                       <span>Mon–Fri: 7:00 AM – 6:00 PM</span>
                       <span>Sat: By appointment</span>
-                      <span>Sun: Closed</span>
+                      <span>Sun: By appointment</span>
                     </div>
                   </div>
                 </div>

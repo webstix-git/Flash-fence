@@ -79,7 +79,7 @@ export default function FenceTypeShowcase() {
                         style={{
                           backgroundColor: color.swatch,
                           border:
-                            color.name === "White"
+                            color.name === "White" || color.name === "Tan" || color.name === "Clay"
                               ? "1px solid rgba(0, 0, 0, 0.15)"
                               : "1px solid rgba(255, 255, 255, 0.2)",
                         }}

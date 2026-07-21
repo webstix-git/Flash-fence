@@ -33,7 +33,7 @@ export default function TestimonialsPage() {
           <span className="text-mono">Verified Feedback</span>
           <h2 className="heading-no-accent">Reviewed On Google &amp; Angi</h2>
           <p className="reviews-section-intro">
-            Every review below comes from real Flash Fence customers. Dylan Gardow and the crew are proud to earn trust through responsive communication and on-site craftsmanship.
+            Every review below comes from real customers. We are proud to earn trust through responsive communication and on-site craftsmanship.
           </p>
 
           <ReviewsBlock testimonials={TESTIMONIALS} columns={2} />

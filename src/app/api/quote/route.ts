@@ -47,7 +47,7 @@ Details: ${details || "No details provided"}
 
     return NextResponse.json(
       {
-        message: "Estimate request received! Owner Dylan Gardow has been notified via text and will contact you shortly.",
+        message: "Estimate request received! I've been notified via text and will contact you shortly.",
         smsDispatched: true,
       },
       { status: 200 }
@@ -55,7 +55,7 @@ Details: ${details || "No details provided"}
   } catch (error) {
     console.error("API error:", error);
     return NextResponse.json(
-      { error: "Internal server error. Please call Dylan directly at 715-299-0663." },
+      { error: "Internal server error. Please call us directly at 715-299-0663." },
       { status: 500 }
     );
   }

@@ -5,13 +5,14 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
+import FenceTypeShowcase from "@/components/FenceTypeShowcase";
 
 export default function FencingService() {
   return (
     <div className="inner-page">
       <PageHero
         title="Fencing Installation & Design"
-        subtitle="We design and construct premium property boundaries built to secure your yard, safeguard pets, and provide absolute privacy. Dylan Gardow oversees every single post installation."
+        subtitle="We design and construct premium property boundaries built to secure your yard and safeguard pets."
         backgroundImage="/gallery/gallery-02.png"
       >
         <div className="page-hero-actions">
@@ -35,33 +36,33 @@ export default function FencingService() {
               <span className="text-mono">Product Offerings</span>
               <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Fencing Built For Performance</h2>
               <p>
-                We build durable boundaries designed for Wisconsin conditions. Every post is properly set with careful preparation and proven installation methods to help ensure long-lasting stability.
+                We build durable boundaries designed for Wisconsin conditions, using professional fence systems aligned with Merchants Metals product lines—vinyl, wood, chain link, and ornamental steel and aluminum—in the styles and colors homeowners ask for most. Every post is properly set with careful preparation and proven installation methods.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
-                <div className="feature-item">
+                <div className="feature-item" id="vinyl" style={{ scrollMarginTop: "6rem" }}>
                   <div>
-                    <h3>Premium Vinyl Privacy</h3>
+                    <h3>Vinyl Fencing</h3>
                     <p>
-                      Engineered vinyl pickets and posts that require zero painting. They resist extreme winds, moisture, and fading, offering full visual isolation for backyards and residential structures.
+                      Low-maintenance vinyl in privacy, semi-privacy, picket, and ranch rail styles. Common colors include white, tan, clay/adobe, and gray, with wood-grain finishes available where stocked. Built to resist Wisconsin weather without painting or staining.
                     </p>
                   </div>
                 </div>
 
-                <div className="feature-item">
+                <div className="feature-item" id="wood" style={{ scrollMarginTop: "6rem" }}>
                   <div>
-                    <h3>Custom Wood Picket &amp; Privacy</h3>
+                    <h3>Wood Fencing</h3>
                     <p>
-                      Constructed on-site from premium cedar or pressure-treated boards. Tailored to map your yard&apos;s natural slope with seamless grading transitions and built-to-last gate hardware.
+                      Western red cedar and pressure-treated pine in privacy, spaced picket, and post-and-rail layouts. Constructed on-site to follow your yard&apos;s natural slope with durable gate hardware.
                     </p>
                   </div>
                 </div>
 
-                <div className="feature-item" style={{ borderBottom: "none" }}>
+                <div className="feature-item" id="chain-link" style={{ borderBottom: "none", scrollMarginTop: "6rem" }}>
                   <div>
-                    <h3>Chain Link &amp; Ornamental Steel</h3>
+                    <h3>Chain Link &amp; Ornamental</h3>
                     <p>
-                      High-strength galvanized or black vinyl-coated chain link for secure property lines, alongside steel and aluminum fencing for estate boundaries and commercial curb appeal.
+                      Galvanized, aluminized, and color-coated chain link in black or green, plus pre-slatted privacy options. Ornamental steel and aluminum systems for residential and commercial curb appeal.
                     </p>
                   </div>
                 </div>
@@ -70,14 +71,14 @@ export default function FencingService() {
 
             <div className="why-image-panel why-image-panel--fit">
               <Image
-                src="/fencing-vinyl-install.jpg"
-                alt="White vinyl privacy fence installation"
+                src="/fencing-vinyl-lattice.png"
+                alt="White vinyl privacy fence with lattice top"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
               <div className="why-image-caption">
-                <h4>Built below the frost line.</h4>
+                <h4>Built for long-term stability.</h4>
                 <p>Every post is set deep with commercial-grade techniques, backed by our 2-Year Craftsmanship Warranty.</p>
               </div>
             </div>
@@ -85,39 +86,15 @@ export default function FencingService() {
         </div>
       </section>
 
-      <section className="section-dark">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "var(--space-xl)" }}>
-            <span className="text-mono">Fence Types</span>
-            <h2 className="heading-no-accent">Complete Fencing Scope</h2>
-          </div>
-
-          <div className="services-grid service-detail-cards">
-            <div className="service-card service-card-dark">
-              <h3>Premium Vinyl Privacy</h3>
-              <p>Engineered vinyl pickets and posts that require zero painting. They resist extreme winds, moisture, and fading.</p>
-            </div>
-
-            <div className="service-card service-card-dark">
-              <h3>Custom Wood Picket &amp; Privacy</h3>
-              <p>Constructed on-site from premium cedar or pressure-treated boards tailored to your yard&apos;s natural slope.</p>
-            </div>
-
-            <div className="service-card service-card-dark">
-              <h3>Chain Link, Steel &amp; Aluminum</h3>
-              <p>High-strength galvanized or black vinyl-coated chain link alongside steel and aluminum fencing options.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FenceTypeShowcase />
 
       <section className="section-light">
         <div className="container">
           <div className="grid-service-fencing grid-service-fencing--image-left">
             <div className="why-image-panel why-image-panel--fit">
               <Image
-                src="/gallery/gallery-02.png"
-                alt="White vinyl privacy fence installation"
+                src="/fencing-chain-link.png"
+                alt="Black vinyl-coated chain link fence installation"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 style={{ objectFit: "cover" }}
@@ -142,7 +119,7 @@ export default function FencingService() {
                   <div>
                     <h3>Layout Before We Build</h3>
                     <p>
-                      Dylan walks the property line with you before posts go in. Corners, gate swings, slope changes, and utility clearances get marked out upfront so the finished layout matches what you approved.
+                      We walk the property line with you before posts go in. Corners, gate swings, slope changes, and utility clearances get marked out upfront so the finished layout matches what you approved.
                     </p>
                   </div>
                 </div>
@@ -164,7 +141,7 @@ export default function FencingService() {
       <InnerPageCta
         id="contact"
         title="Ready to secure your property?"
-        description="Complete our free estimate form. Dylan Gardow will text or call you directly to discuss layouts, post counts, and linear footage."
+        description="Complete our free estimate form. We will text or call you directly to discuss layouts, post counts, and linear footage."
         buttonText="Request A Free Quote"
       />
     </div>

@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-} from "lucide-react";
 import InnerPageCta from "@/components/InnerPageCta";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -51,7 +48,7 @@ export default function ServicesIndex() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Premium Fencing</h3>
                 <p className="pillar-desc">
-                  Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, steel, and aluminum.
+                  Meticulous fence installations. We design and set vinyl, wood, chain link, and ornamental steel and aluminum systems in the styles and colors homeowners ask for most.
                 </p>
                 <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
@@ -89,7 +86,7 @@ export default function ServicesIndex() {
             <span className="text-mono">Service Directory</span>
             <h2 className="heading-no-accent">All Trades &amp; Capabilities</h2>
             <p>
-              Explore every service Flash Fence offers across fencing installation, excavation, and site prep, all supervised on site by owner Dylan Gardow.
+              Explore every service we offer across fencing installation, excavation, and site prep.
             </p>
           </div>
 
@@ -97,63 +94,45 @@ export default function ServicesIndex() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Vinyl Fencing</h3>
-              <p>Premium privacy and picket vinyl options. Resilient against wind, winter cold, and moisture. Never rot or fade.</p>
-              <Link href="/services/fencing" className="blog-link">
-                Learn More <ArrowRight size={14} />
-              </Link>
+              <p>Privacy, semi-privacy, picket, and ranch rail styles in white, tan, clay/adobe, and gray—plus wood-grain options where available.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Wood Fencing</h3>
-              <p>Classic cedar privacy, spaced picket, and post-and-rail. Constructed on-site to match your yard&apos;s natural contours.</p>
-              <Link href="/services/fencing" className="blog-link">
-                Learn More <ArrowRight size={14} />
-              </Link>
+              <p>Western red cedar and pressure-treated pine in privacy, spaced picket, and post-and-rail layouts matched to your yard.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Chain Link, Steel &amp; Aluminum</h3>
-              <p>Industrial galvanized or black vinyl-coated chain link for security, plus steel and aluminum fencing options.</p>
-              <Link href="/services/fencing" className="blog-link">
-                Learn More <ArrowRight size={14} />
-              </Link>
+              <p>Galvanized, aluminized, and color-coated chain link in black or green, plus ornamental steel and aluminum systems.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Land Clearing &amp; Storm Prep</h3>
               <p>Removing thick brush, small trees, storm damage, and old fencing. Clean line prep for property development.</p>
-              <Link href="/services/site-prep" className="blog-link">
-                Learn More <ArrowRight size={14} />
-              </Link>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Site &amp; Concrete Prep</h3>
               <p>Concrete grading and prep work, soil compaction, and digging out sub-bases for pads, patios, driveways, or fence lines.</p>
-              <Link href="/services/excavation" className="blog-link">
-                Learn More <ArrowRight size={14} />
-              </Link>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Demolition &amp; Utilities</h3>
-              <p>Small demolition projects, concrete slab breaking, and trenching for water line, sewer line, or drainage routing.</p>
-              <Link href="/services/excavation" className="blog-link">
-                Learn More <ArrowRight size={14} />
-              </Link>
+              <p>Small demolition projects, concrete removal, and trenching for underground utilities, sewer line, or drainage routing.</p>
             </div>
           </div>
         </div>
       </section>
 
       <InnerPageCta
-        title="Dylan Gardow&apos;s 2-Year Craftsmanship Warranty"
-        description="Regardless of project scale or division, every post set and yard graded is backed by our local service guarantee. Owner Dylan Gardow oversees all layout details."
+        title="2-Year Craftsmanship Warranty"
+        description="Regardless of project scale or division, every post set and yard graded is backed by our local service guarantee."
         buttonText="Request A Free Quote"
       />
     </div>

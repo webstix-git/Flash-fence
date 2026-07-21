@@ -41,7 +41,7 @@ export default function PrivacyPage() {
             </p>
             <ul>
               <li>To contact you for boundary layouts, linear assessments, or site walk-through timings.</li>
-              <li>To send text notifications when owner Dylan Gardow is in transit to your site.</li>
+              <li>To send text notifications when I am in transit to your site.</li>
               <li>To execute contract documentation and craftsmanship warranty schedules.</li>
             </ul>
             <p>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
 
             <h2 className="heading-no-accent">3. Text/SMS Communications</h2>
             <p>
-              By providing your telephone number on our forms, you consent to receive direct project follow-up texts from Dylan Gardow. Message and data rates may apply. You can reply &quot;STOP&quot; at any time to opt-out of SMS notifications.
+              By providing your telephone number on our forms, you consent to receive direct project follow-up texts from us. Message and data rates may apply. You can reply &quot;STOP&quot; at any time to opt-out of SMS notifications.
             </p>
 
             <h2 className="heading-no-accent">4. Contact Us</h2>

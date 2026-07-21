@@ -11,7 +11,7 @@ export default function ExcavationService() {
     <div className="inner-page">
       <PageHero
         title="Site Excavation & Groundwork"
-        subtitle="Reliable, year-round land clearing, grading, and site preparation. We bring the right equipment to handle everything from property clearing to heavy sub-base preparation for Wisconsin homeowners and builders."
+        subtitle="Reliable, year-round land clearing, grading, and site preparation. From land clearing to site preparation all the way to the finish touches of the restoration of the property."
         backgroundImage="/gallery/gallery-02.png"
       >
         <div className="page-hero-actions">
@@ -35,15 +35,15 @@ export default function ExcavationService() {
               <span className="text-mono">Sub-Grade Quality</span>
               <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Groundwork Prepared the Right Way</h2>
               <p>
-                Quality site preparation starts with proper excavation, accurate grading, and the right approach for each project. We dig correctly, prepare the base, and use proven systems when needed to handle Wisconsin conditions.
+                Quality site preparation starts with proper excavation and grading and the use of the right drainage systems.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
-                <div className="feature-item" style={{ borderBottom: "none" }}>
+                <div className="feature-item" id="concrete-prep" style={{ borderBottom: "none", scrollMarginTop: "6rem" }}>
                   <div>
                     <h3>Concrete grading and prep work</h3>
                     <p>
-                      Precision grading, compaction, and digging out sub-bases for patios, driveways, slab foundations, and fence layouts.
+                      Precision grading and necessary soil corrections dug out for patios, driveways, and concrete slabs.
                     </p>
                   </div>
                 </div>
@@ -75,19 +75,19 @@ export default function ExcavationService() {
           </div>
 
           <div className="services-grid service-detail-cards">
-            <div className="service-card service-card-dark">
+            <div className="service-card service-card-dark" id="land-clearing" style={{ scrollMarginTop: "6rem" }}>
               <h3>Land &amp; Brush Clearing</h3>
               <p>Removing thick vegetation, storm debris, small trees, and stubborn stumps. Prepares clean layouts for fences or structures.</p>
             </div>
 
-            <div className="service-card service-card-dark">
+            <div className="service-card service-card-dark" id="compaction" style={{ scrollMarginTop: "6rem" }}>
               <h3>Sub-Grade Compact</h3>
               <p>Thorough soil compaction and gravel grading to establish stable drainage layers before pouring concrete or asphalt.</p>
             </div>
 
-            <div className="service-card service-card-dark">
+            <div className="service-card service-card-dark" id="utilities" style={{ scrollMarginTop: "6rem" }}>
               <h3>Utility Trenching</h3>
-              <p>Digging out sewer, water, and electrical conduit lines. Insulated trenching set below frost lines for maximum safety.</p>
+              <p>Digging out sewer, water, and electrical conduit lines.</p>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ExcavationService() {
       <InnerPageCta
         id="contact"
         title="Need groundwork done right?"
-        description="Our team handles excavation work year-round. Get in touch with Dylan Gardow to schedule a site overview and secure your estimate."
+        description="We handle excavation work year-round. Get in touch to schedule a site overview and secure your estimate."
         buttonText="Request Excavation Estimate"
       />
     </div>
