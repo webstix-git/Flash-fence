@@ -61,8 +61,8 @@ export default function About() {
               style={{ aspectRatio: "4 / 3", minHeight: "auto" }}
             >
               <Image
-                src="/completed-vinyl-installation.jpg"
-                alt="Flash Fence finished white vinyl privacy fence"
+                src="/about-owner-promise.png"
+                alt="White vinyl privacy fence screening a residential patio"
                 fill
                 style={{ objectFit: "cover" }}
               />
