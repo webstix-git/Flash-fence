@@ -12,7 +12,7 @@ export default function ContactPage() {
         eyebrow="Get in Touch"
         title="Contact Flash Fence"
         subtitle="Whether you need a new vinyl privacy fence or small lot excavation, we deliver perfectionist trades work."
-        backgroundImage="/vinyl-fence-detail.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

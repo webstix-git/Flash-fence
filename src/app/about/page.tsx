@@ -22,7 +22,7 @@ export default function About() {
       <PageHero
         eyebrow="About Flash Fence"
         title="Perfectionist Quality Built For The Chippewa Valley"
-        backgroundImage="/completed-vinyl-installation.jpg"
+        backgroundImage="/page-hero-banner.png"
         tall
       />
 
@@ -46,7 +46,7 @@ export default function About() {
                 In the modern contracting industry, it is far too common for business owners to sell a job and then pass it off to sub-contractors or unsupervised crews. I built Flash Fence to break that cycle.
               </p>
               <p>
-                <strong>I am always on site.</strong> From pounding posts to setting vinyl and wood pickets, I lead the installation myself. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
+                <strong>I am always on site.</strong> From understanding building codes by county to pounding posts and setting vinyl and wood pickets, I lead the installation myself. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
               </p>
               <p>
                 Our reputation is anchored in precision. We refuse to run cluttered layouts or deliver subpar results.

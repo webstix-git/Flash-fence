@@ -12,7 +12,7 @@ export default function ChooseRightFencingPost() {
       <PageHero
         eyebrow="Fencing Guidance"
         title="How to Choose the Right Fencing for Your Family's Needs"
-        backgroundImage="/completed-vinyl-installation.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

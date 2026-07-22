@@ -18,7 +18,7 @@ export default function GalleryPage() {
     <div className="inner-page">
       <PageHero
         title="Photo Gallery"
-        backgroundImage="/gallery/gallery-02.png"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

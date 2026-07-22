@@ -12,7 +12,7 @@ export default function ProperSitePrepSavesMoneyPost() {
       <PageHero
         eyebrow="Site Prep Value"
         title="How the Proper Site Prep Can Save You Money"
-        backgroundImage="/site-excavation.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

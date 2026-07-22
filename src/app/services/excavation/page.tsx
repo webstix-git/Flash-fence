@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -12,11 +11,11 @@ export default function ExcavationService() {
       <PageHero
         title="Site Excavation & Groundwork"
         subtitle="Reliable, year-round land clearing, grading, and site preparation. From land clearing to site preparation all the way to the finish touches of the restoration of the property."
-        backgroundImage="/gallery/gallery-02.png"
+        backgroundImage="/page-hero-banner.png"
       >
         <div className="page-hero-actions">
-          <a href="#contact" className="btn btn-primary">Book Groundwork</a>
-          <Link href="/contact" className="btn btn-secondary">Request Call</Link>
+          <a href="/contact" className="btn btn-primary">Get A Free Estimate</a>
+          <a href="tel:715-299-0663" className="btn btn-secondary">Request Call</a>
         </div>
       </PageHero>
 
@@ -97,7 +96,7 @@ export default function ExcavationService() {
         id="contact"
         title="Need groundwork done right?"
         description="We handle excavation work year-round. Get in touch to schedule a site overview and secure your estimate."
-        buttonText="Request Excavation Estimate"
+        buttonText="Get A Free Estimate"
       />
     </div>
   );

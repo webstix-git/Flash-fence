@@ -12,7 +12,7 @@ export default function IncreaseHomeValueFencePost() {
       <PageHero
         eyebrow="Home Value"
         title="How to Increase Home Value With a New Fence"
-        backgroundImage="/fencing-vinyl-install.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

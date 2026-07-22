@@ -69,7 +69,7 @@ export default function FaqPage() {
         eyebrow="Common Questions"
         title="Frequently Asked Questions"
         subtitle="Get detailed facts about our high-durability craftsmanship warranty, project pricing timeline, and excavation readiness."
-        backgroundImage="/old-wood-fence.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

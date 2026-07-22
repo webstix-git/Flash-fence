@@ -13,7 +13,7 @@ export default function BlogIndex() {
         eyebrow="Wisconsin Trade Insights"
         title="Flash Fence Blog & Insights"
         subtitle="Professional fencing tips and groundwork guidelines to prepare your Chippewa Valley property."
-        backgroundImage="/old-wood-fence.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

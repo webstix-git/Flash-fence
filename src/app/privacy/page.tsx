@@ -7,7 +7,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Regulatory compliance"
         title="Privacy Policy"
-        backgroundImage="/completed-vinyl-installation.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

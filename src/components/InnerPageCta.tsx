@@ -13,7 +13,7 @@ interface InnerPageCtaProps {
 export default function InnerPageCta({
   title,
   description,
-  buttonText = "Get A Free Quote",
+  buttonText = "Get A Free Estimate",
   buttonHref = "/contact",
   backgroundImage = "/completed-vinyl-installation.jpg",
   id,
@@ -29,13 +29,13 @@ export default function InnerPageCta({
         <h2 className="heading-no-accent">{title}</h2>
         <p className="inner-page-cta-desc">{description}</p>
         <div className="inner-page-cta-actions">
-          <a href="tel:715-299-0663" className="btn btn-primary">
-            <Phone size={16} />
-            Call 715-299-0663
-          </a>
-          <Link href={buttonHref} className="btn btn-secondary">
+          <Link href={buttonHref} className="btn btn-primary">
             {buttonText}
           </Link>
+          <a href="tel:715-299-0663" className="btn btn-secondary">
+            <Phone size={16} />
+            Request Call
+          </a>
         </div>
       </div>
     </section>

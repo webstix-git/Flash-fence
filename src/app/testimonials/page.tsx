@@ -18,7 +18,7 @@ export default function TestimonialsPage() {
         eyebrow="What Neighbors Say"
         title="Customer Reviews"
         subtitle="Real feedback from Wisconsin homeowners who trusted Flash Fence for fencing installation and site work across the Chippewa Valley."
-        backgroundImage="/gallery/gallery-02.png"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs
@@ -43,7 +43,7 @@ export default function TestimonialsPage() {
       <InnerPageCta
         title="Ready for your own 5-star experience?"
         description="Join homeowners across Eau Claire and the Chippewa Valley who trust Flash Fence for fencing and groundwork. Request your free estimate today."
-        buttonText="Get A Free Quote"
+        buttonText="Get A Free Estimate"
       />
     </div>
   );

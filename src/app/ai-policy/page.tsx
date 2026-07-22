@@ -7,7 +7,7 @@ export default function AiPolicyPage() {
       <PageHero
         eyebrow="Automation Transparency"
         title="AI Policy & Operations"
-        backgroundImage="/vinyl-fence-detail.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

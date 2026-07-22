@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -13,11 +12,11 @@ export default function FencingService() {
       <PageHero
         title="Fencing Installation & Design"
         subtitle="We design and construct premium property boundaries built to secure your yard and safeguard pets."
-        backgroundImage="/gallery/gallery-02.png"
+        backgroundImage="/page-hero-banner.png"
       >
         <div className="page-hero-actions">
-          <a href="#contact" className="btn btn-primary">Get A Free Estimate</a>
-          <Link href="/contact" className="btn btn-secondary">Request Call</Link>
+          <a href="/contact" className="btn btn-primary">Get A Free Estimate</a>
+          <a href="tel:715-299-0663" className="btn btn-secondary">Request Call</a>
         </div>
       </PageHero>
 
@@ -142,7 +141,7 @@ export default function FencingService() {
         id="contact"
         title="Ready to secure your property?"
         description="Complete our free estimate form. We will text or call you directly to discuss layouts, post counts, and linear footage."
-        buttonText="Request A Free Quote"
+        buttonText="Get A Free Estimate"
       />
     </div>
   );

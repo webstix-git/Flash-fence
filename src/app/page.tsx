@@ -67,7 +67,7 @@ export default function Home() {
               className="hero-actions"
             >
               <Link href="/contact" className="btn btn-primary">
-                Get A Free Quote
+                Get A Free Estimate
               </Link>
             </motion.div>
           </div>
@@ -158,7 +158,7 @@ export default function Home() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Premium Fencing</h3>
                 <p className="pillar-desc">
-                  Meticulous fence installations. We design and set boundaries using industrial vinyl, classic cedar, chain link, and steel and aluminum ornamental fencing.
+                  Meticulous fence installations. We design and install vinyl, wood, chain link, and steel and aluminum ornamental fencing in the styles and colors homeowners ask for most.
                 </p>
                 <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
@@ -219,7 +219,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Chain Link, Steel &amp; Aluminum</h3>
-              <p>Galvanized, aluminized, and color-coated chain link in black or green, plus ornamental steel and aluminum systems.</p>
+              <p>Galvanized, aluminized, and color-coated chain link in black or green, plus steel and aluminum ornamental options.</p>
             </div>
 
             <div className="service-card service-card-dark">
@@ -267,7 +267,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link href="/contact" className="btn btn-primary">
-                Get A Free Quote
+                Get A Free Estimate
               </Link>
             </div>
 
@@ -437,13 +437,13 @@ export default function Home() {
           </p>
 
           <div className="cta-banner-actions">
-            <a href="tel:715-299-0663" className="btn btn-primary">
-              <Phone size={16} style={{ marginRight: "var(--space-xs)" }} />
-              Call 715-299-0663
-            </a>
-            <Link href="/contact" className="btn btn-secondary">
-              Get A Free Quote
+            <Link href="/contact" className="btn btn-primary">
+              Get A Free Estimate
             </Link>
+            <a href="tel:715-299-0663" className="btn btn-secondary">
+              <Phone size={16} style={{ marginRight: "var(--space-xs)" }} />
+              Request Call
+            </a>
           </div>
 
           <div className="cta-banner-features">

@@ -107,7 +107,7 @@ export default function AiReadinessServiceIndexPage() {
         eyebrow="Structured Service Directory"
         title="AI Readiness Service Index"
         subtitle="A machine-readable overview of Flash Fence LLC services, service area, and contact routes for search assistants and automated inquiry tools."
-        backgroundImage="/old-wood-fence.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

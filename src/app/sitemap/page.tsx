@@ -50,7 +50,7 @@ export default function SitemapPage() {
         eyebrow="Route Directory"
         title="Sitemap"
         subtitle="Locate any directory link across our fencing and excavation portal. Structured for search engine bots and local Chippewa Valley users."
-        backgroundImage="/old-wood-fence.jpg"
+        backgroundImage="/page-hero-banner.png"
       />
 
       <Breadcrumbs

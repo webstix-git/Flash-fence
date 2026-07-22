@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
@@ -12,11 +11,11 @@ export default function SitePrepService() {
       <PageHero
         title="Site Prep & Land Clearing"
         subtitle="Expert brush clearing, old fence demolition, and site grading. We prep the groundwork to ensure your new fence or construction layout stands on solid foundation."
-        backgroundImage="/gallery/gallery-02.png"
+        backgroundImage="/page-hero-banner.png"
       >
         <div className="page-hero-actions">
-          <a href="#contact" className="btn btn-primary">Start Site Prep</a>
-          <Link href="/contact" className="btn btn-secondary">Request Call</Link>
+          <a href="/contact" className="btn btn-primary">Get A Free Estimate</a>
+          <a href="tel:715-299-0663" className="btn btn-secondary">Request Call</a>
         </div>
       </PageHero>
 
@@ -89,7 +88,7 @@ export default function SitePrepService() {
         id="contact"
         title="Get your site ready for upgrades"
         description="Let us inspect your property lines and determine optimal prep steps. Complete our fast form to schedule a site review."
-        buttonText="Request Site Prep Estimate"
+        buttonText="Get A Free Estimate"
       />
     </div>
   );

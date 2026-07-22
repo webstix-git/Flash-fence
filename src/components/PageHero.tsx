@@ -17,7 +17,7 @@ export default function PageHero({
   eyebrow,
   title,
   subtitle,
-  backgroundImage = "/completed-vinyl-installation.jpg",
+  backgroundImage = "/page-hero-banner.png",
   overlay = "default",
   tall = false,
   children,

@@ -13,7 +13,7 @@ export default function ServicesIndex() {
         eyebrow="What We Do"
         title="One Shop. Fence & Ground."
         subtitle="From custom fence installation to year-round excavation and site prep, we handle your exterior projects with industrial-grade precision, all under one owner-supervised crew."
-        backgroundImage="/gallery/gallery-02.png"
+        backgroundImage="/page-hero-banner.png"
         overlay="strong"
       />
 
@@ -48,7 +48,7 @@ export default function ServicesIndex() {
               <div className="pillar-content">
                 <h3 className="pillar-title">Premium Fencing</h3>
                 <p className="pillar-desc">
-                  Meticulous fence installations. We design and set vinyl, wood, chain link, and ornamental steel and aluminum systems in the styles and colors homeowners ask for most.
+                  Meticulous fence installations. We design and install vinyl, wood, chain link, and steel and aluminum ornamental fencing in the styles and colors homeowners ask for most.
                 </p>
                 <Link href="/services/fencing" className="btn btn-secondary btn-compact">
                   View Fencing Services
@@ -106,7 +106,7 @@ export default function ServicesIndex() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Chain Link, Steel &amp; Aluminum</h3>
-              <p>Galvanized, aluminized, and color-coated chain link in black or green, plus ornamental steel and aluminum systems.</p>
+              <p>Galvanized, aluminized, and color-coated chain link in black or green, plus steel and aluminum ornamental options.</p>
             </div>
 
             <div className="service-card service-card-dark">
@@ -133,7 +133,7 @@ export default function ServicesIndex() {
       <InnerPageCta
         title="2-Year Craftsmanship Warranty"
         description="Regardless of project scale or division, every post set and yard graded is backed by our local service guarantee."
-        buttonText="Request A Free Quote"
+        buttonText="Get A Free Estimate"
       />
     </div>
   );
