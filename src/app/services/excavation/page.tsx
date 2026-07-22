@@ -11,7 +11,7 @@ export default function ExcavationService() {
       <PageHero
         title="Site Excavation & Groundwork"
         subtitle="Reliable, year-round land clearing, grading, and site preparation. From land clearing to site preparation all the way to the finish touches of the restoration of the property."
-        backgroundImage="/page-hero-banner.png"
+        backgroundImage="/excavation-banner.png"
       >
         <div className="page-hero-actions">
           <a href="/contact" className="btn btn-primary">Get A Free Estimate</a>
@@ -29,7 +29,7 @@ export default function ExcavationService() {
 
       <section className="section-light">
         <div className="container">
-          <div className="grid-service-fencing" style={{ alignItems: "center" }}>
+          <div className="grid-service-fencing grid-service-fencing--stretch">
             <div>
               <span className="text-mono">Sub-Grade Quality</span>
               <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Groundwork Prepared the Right Way</h2>
@@ -49,10 +49,10 @@ export default function ExcavationService() {
               </div>
             </div>
 
-            <div className="why-image-panel" style={{ aspectRatio: "4 / 3", minHeight: "auto" }}>
+            <div className="why-image-panel why-image-panel--fit">
               <Image
-                src="/excavation-site-prep.jpg"
-                alt="Site preparation and grading for excavation work"
+                src="/excavation-first-section.png"
+                alt="Site grading and excavation with skid steer and surveying equipment"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}

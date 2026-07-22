@@ -69,8 +69,8 @@ export default function SitePrepService() {
 
             <div className="why-image-panel why-image-panel--fit">
               <Image
-                src="/site-prep-excavation.png"
-                alt="Site prep excavation with laser level and heavy equipment"
+                src="/site-prep-section.png"
+                alt="Site prep with drainage channel, riprap, and erosion control matting"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}

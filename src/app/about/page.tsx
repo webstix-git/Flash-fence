@@ -188,8 +188,8 @@ export default function About() {
 
             <div className="why-image-panel" style={{ aspectRatio: "4 / 3", minHeight: "auto" }}>
               <Image
-                src="/gallery/gallery-02.png"
-                alt="Flash Fence vinyl installation in the Chippewa Valley"
+                src="/about-service-area.png"
+                alt="White vinyl privacy fence installation in the Chippewa Valley"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
