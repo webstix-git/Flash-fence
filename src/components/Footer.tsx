@@ -50,8 +50,6 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/" className="footer-link">Home</Link></li>
               <li><Link href="/about" className="footer-link">About Us</Link></li>
-              <li><Link href="/services/fencing" className="footer-link">Fencing</Link></li>
-              <li><Link href="/services/excavation" className="footer-link">Excavation</Link></li>
               <li><Link href="/gallery" className="footer-link">Gallery</Link></li>
               <li><Link href="/testimonials" className="footer-link">Testimonials</Link></li>
               <li><Link href="/faq" className="footer-link">FAQs</Link></li>
