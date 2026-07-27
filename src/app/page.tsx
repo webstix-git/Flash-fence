@@ -207,7 +207,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Vinyl Fencing</h3>
-              <p>Privacy, semi-privacy, picket, and ranch rail styles in white, tan, clay/adobe, and gray—plus wood-grain options where available.</p>
+              <p>Privacy, semi-privacy, picket, and ranch rail styles in white, tan, clay/adobe, and gray plus wood-grain options are available.</p>
             </div>
 
             <div className="service-card service-card-dark">
