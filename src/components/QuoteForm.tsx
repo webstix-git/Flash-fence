@@ -163,7 +163,7 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
             disabled={status === "loading"}
           >
             <option value="fencing">Fencing Installation</option>
-            <option value="excavation">Small Excavation</option>
+            <option value="excavation">Excavation</option>
             <option value="prep">Site Prep & Land Clearing</option>
             <option value="other">Other Projects</option>
           </select>

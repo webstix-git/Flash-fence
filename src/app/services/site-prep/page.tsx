@@ -89,7 +89,7 @@ export default function SitePrepService() {
         title="Get your site ready for upgrades"
         description="Let us inspect your property lines and determine optimal prep steps. Complete our fast form to schedule a site review."
         buttonText="Get A Free Estimate"
-        backgroundImage="/site-prep-banner.png"
+        backgroundImage="/site-prep-cta-bg.png"
         className="inner-page-cta--strong-overlay"
       />
     </div>
