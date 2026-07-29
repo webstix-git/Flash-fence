@@ -11,7 +11,7 @@ export default function SitePrepService() {
       <PageHero
         title="Site Prep & Land Clearing"
         subtitle="Expert brush clearing, old fence demolition, and site grading. We prep the groundwork to ensure your new fence or construction layout stands on solid foundation."
-        backgroundImage="/page-hero-banner.png"
+        backgroundImage="/site-prep-banner.png"
       >
         <div className="page-hero-actions">
           <a href="/contact" className="btn btn-primary">Get A Free Estimate</a>
@@ -89,6 +89,8 @@ export default function SitePrepService() {
         title="Get your site ready for upgrades"
         description="Let us inspect your property lines and determine optimal prep steps. Complete our fast form to schedule a site review."
         buttonText="Get A Free Estimate"
+        backgroundImage="/site-prep-banner.png"
+        className="inner-page-cta--strong-overlay"
       />
     </div>
   );

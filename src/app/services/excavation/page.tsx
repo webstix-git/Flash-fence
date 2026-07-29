@@ -97,6 +97,8 @@ export default function ExcavationService() {
         title="Need groundwork done right?"
         description="We handle excavation work year-round. Get in touch to schedule a site overview and secure your estimate."
         buttonText="Get A Free Estimate"
+        backgroundImage="/excavation-cta-bg.png"
+        className="inner-page-cta--strong-overlay"
       />
     </div>
   );

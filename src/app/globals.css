@@ -3550,6 +3550,15 @@ a.contact-detail-value:hover {
   z-index: 0;
 }
 
+.inner-page-cta--strong-overlay::before {
+  background: linear-gradient(
+    to right,
+    rgba(var(--color-secondary-rgb), 0.88) 0%,
+    rgb(23 23 23 / 89%) 50%,
+    rgb(0 0 0 / 84%) 100%
+  );
+}
+
 .inner-page-cta .container {
   position: relative;
   z-index: 1;

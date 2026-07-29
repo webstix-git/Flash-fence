@@ -7,6 +7,7 @@ interface InnerPageCtaProps {
   buttonText?: string;
   buttonHref?: string;
   backgroundImage?: string;
+  className?: string;
   id?: string;
 }
 
@@ -16,11 +17,12 @@ export default function InnerPageCta({
   buttonText = "Get A Free Estimate",
   buttonHref = "/contact",
   backgroundImage = "/completed-vinyl-installation.jpg",
+  className = "",
   id,
 }: InnerPageCtaProps) {
   return (
     <section
-      className="inner-page-cta"
+      className={`inner-page-cta${className ? ` ${className}` : ""}`}
       id={id}
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >

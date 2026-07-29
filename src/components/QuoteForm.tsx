@@ -165,7 +165,6 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
             <option value="fencing">Fencing Installation</option>
             <option value="excavation">Small Excavation</option>
             <option value="prep">Site Prep & Land Clearing</option>
-            <option value="concrete">Concrete & Storm Prep</option>
             <option value="other">Other Projects</option>
           </select>
         </div>
@@ -180,7 +179,7 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
             name="details"
             value={formData.details}
             onChange={handleChange}
-            placeholder="Describe your fence type (vinyl, wood, chain link) or excavation scope. Include approximate linear footage if known."
+            placeholder="Describe your fence type (vinyl, wood, chain link) or excavation scope."
             className="form-textarea"
             disabled={status === "loading"}
           />
