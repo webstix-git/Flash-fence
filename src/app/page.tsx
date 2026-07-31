@@ -114,8 +114,8 @@ export default function Home() {
 
             <div className="why-image-panel">
               <Image
-                src="/why-flash-fence.png"
-                alt="Black vinyl-coated chain link fence installed in a residential backyard"
+                src="/why-flash-fence-patio.png"
+                alt="White vinyl privacy fence panel screening a patio hot tub area"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
