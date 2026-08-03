@@ -43,10 +43,10 @@ export default function About() {
             >
               <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>The Owner On-Site Promise</h2>
               <p>
-                In the modern contracting industry, it is far too common for business owners to sell a job and then pass it off to sub-contractors or unsupervised crews. I built Flash Fence to break that cycle.
+                In the modern contracting industry, it is far too common for business owners to sell a job and then pass it off to sub-contractors or unsupervised crews. We built Flash Fence to break that cycle.
               </p>
               <p>
-                <strong>I am always on site.</strong> From understanding building codes by county to pounding posts and setting vinyl and wood pickets, I lead the installation myself. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
+                From understanding building codes by county to pounding posts and setting vinyl and wood pickets, we lead the installation ourselves. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
               </p>
               <p>
                 Our reputation is anchored in precision. We refuse to run cluttered layouts or deliver subpar results.
@@ -110,7 +110,7 @@ export default function About() {
               </div>
               <h3>Permits Handled</h3>
               <p>
-                When a project needs a permit, we help you navigate the process. From figuring out what your municipality requires to supporting the paperwork, we keep permitting from becoming a roadblock.
+                When a project needs a permit, we help you navigate the process. From figuring out what your municipality requires to supporting the paperwork, we keep permits from becoming a roadblock.
               </p>
             </div>
           </div>

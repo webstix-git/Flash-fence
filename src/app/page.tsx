@@ -56,8 +56,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="hero-subtitle"
             >
-              High-performance property boundaries and groundwork built for Wisconsin winters. 
-              Get perfectionist craftsmanship I supervise personally on every job.
+              High-performance property boundaries and groundwork built for Wisconsin weather. 
+              Get perfectionist craftsmanship on every job.
             </motion.p>
 
             <motion.div
@@ -207,7 +207,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Vinyl Fencing</h3>
-              <p>Privacy, semi-privacy, picket, and ranch rail styles in white, tan, clay/adobe, and gray plus wood-grain options are available.</p>
+              <p>Privacy, semi-privacy, picket, and ranch rail styles in white, tan, clay, and gray plus wood-grain options are available.</p>
             </div>
 
             <div className="service-card service-card-dark">
@@ -219,7 +219,7 @@ export default function Home() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
               <h3>Chain Link, Steel &amp; Aluminum</h3>
-              <p>Galvanized, aluminized, and color-coated chain link in black or green, plus steel and aluminum ornamental options.</p>
+              <p>Galvanized and color-coated chain link in black or green, plus steel and aluminum ornamental options.</p>
             </div>
 
             <div className="service-card service-card-dark">
@@ -281,7 +281,7 @@ export default function Home() {
               />
               <div className="why-image-caption">
                 <h4>Local crews, local knowledge.</h4>
-                <p>We know Wisconsin frost depths, soil conditions, and property lines because we live here too.</p>
+                <p>We know Wisconsin weather, soil conditions, and what it takes to build fences that last.</p>
               </div>
             </div>
           </div>

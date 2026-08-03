@@ -35,7 +35,7 @@ export default function FencingService() {
               <span className="text-mono">Product Offerings</span>
               <h2 className="heading-no-accent" style={{ fontSize: "2rem", marginBottom: "var(--space-md)" }}>Fencing Built For Performance</h2>
               <p>
-                We build durable boundaries designed for Wisconsin conditions, using professional fence systems aligned with Merchants Metals product lines—vinyl, wood, chain link, and ornamental steel and aluminum—in the styles and colors homeowners ask for most. Every post is properly set with careful preparation and proven installation methods.
+                We build durable fences designed for Wisconsin conditions, in the styles and colors homeowners prefer most. Every post is properly set with careful site preparation and proven installation methods.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginTop: "var(--space-lg)" }}>
@@ -43,7 +43,7 @@ export default function FencingService() {
                   <div>
                     <h3>Vinyl Fencing</h3>
                     <p>
-                      Low-maintenance vinyl in privacy, semi-privacy, picket, and ranch rail styles. Common colors include white, tan, clay/adobe, and gray, with wood-grain finishes available where stocked. Built to resist Wisconsin weather without painting or staining.
+                      Low-maintenance vinyl in privacy, semi-privacy, picket, and ranch rail styles. Common colors include white, tan, clay, and gray, with wood-grain finishes available. Built to resist Wisconsin weather without painting or staining.
                     </p>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function FencingService() {
                   <div>
                     <h3>Chain Link &amp; Ornamental</h3>
                     <p>
-                      Galvanized, aluminized, and color-coated chain link in black or green, plus pre-slatted privacy options. Ornamental steel and aluminum systems for residential and commercial curb appeal.
+                      Galvanized and color-coated chain link in black or green, plus pre-slatted privacy options. Ornamental steel and aluminum systems for residential and commercial curb appeal.
                     </p>
                   </div>
                 </div>
