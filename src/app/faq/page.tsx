@@ -83,14 +83,14 @@ export default function FaqPage() {
         <div className="container faq-ask-inner">
           <div>
             <span className="text-mono">Need More Details?</span>
-            <h2 className="heading-no-accent">Ask A Custom Question</h2>
+            <h2 className="heading-no-accent">Ask A Specific Question</h2>
             <p>
               Didn&apos;t find what you&apos;re looking for? Reach out and we will answer your
               project-specific questions directly.
             </p>
           </div>
           <Link href="/contact" className="btn btn-primary">
-            Ask A Custom Question
+            Ask A Specific Question
           </Link>
         </div>
       </section>
