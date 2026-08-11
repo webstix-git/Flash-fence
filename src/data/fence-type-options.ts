@@ -1,5 +1,6 @@
 export type FenceColorOption = {
   name: string;
+  image: string;
   swatch: string;
 };
 
@@ -10,7 +11,6 @@ export type FenceTypeOption = {
   image: string;
   finishes?: string[];
   colors?: FenceColorOption[];
-  gallery?: string[];
 };
 
 export const FENCE_TYPE_OPTIONS: FenceTypeOption[] = [
@@ -18,19 +18,29 @@ export const FENCE_TYPE_OPTIONS: FenceTypeOption[] = [
     id: "vinyl",
     label: "Vinyl Privacy",
     summary:
-      "Low-maintenance privacy fencing built for Wisconsin weather. Available in the colors listed below — browse the photos for finished install examples.",
+      "Low-maintenance privacy fencing built for Wisconsin weather. Select a color below to preview how it looks on a finished install.",
     image: "/gallery/fencing/vinyl-white.png",
     colors: [
-      { name: "White", swatch: "#F5F5F0" },
-      { name: "Tan", swatch: "#D2B48C" },
-      { name: "Clay", swatch: "#B8956C" },
-      { name: "Gray", swatch: "#8A8A8A" },
-    ],
-    gallery: [
-      "/gallery/fencing/vinyl-white.png",
-      "/gallery/fencing/vinyl-tan-v2.jpg",
-      "/gallery/fencing/vinyl-clay-v2.jpg",
-      "/gallery/fencing/vinyl-gray-v2.jpg",
+      {
+        name: "White",
+        image: "/gallery/fencing/vinyl-white.png",
+        swatch: "#F5F5F0",
+      },
+      {
+        name: "Tan",
+        image: "/gallery/fencing/vinyl-tan-v2.jpg",
+        swatch: "#D2B48C",
+      },
+      {
+        name: "Clay",
+        image: "/gallery/fencing/vinyl-clay-v2.jpg",
+        swatch: "#B8956C",
+      },
+      {
+        name: "Gray",
+        image: "/gallery/fencing/vinyl-gray-v2.jpg",
+        swatch: "#8A8A8A",
+      },
     ],
   },
   {

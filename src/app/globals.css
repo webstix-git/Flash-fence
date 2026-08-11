@@ -3175,34 +3175,44 @@ a.contact-detail-value:hover {
   margin-bottom: var(--space-sm);
 }
 
-.fence-color-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.fence-color-swatches {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm) var(--space-md);
+  gap: var(--space-sm);
 }
 
-.fence-color-item {
+.fence-color-swatch {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  color: rgba(255, 255, 255, 0.9);
+  gap: var(--space-xs);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-btn);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--color-accent);
+  color: rgba(255, 255, 255, 0.85);
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.fence-color-box {
-  width: 28px;
-  height: 28px;
+.fence-color-swatch:hover {
+  border-color: var(--color-primary);
+}
+
+.fence-color-swatch.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.fence-color-swatch-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
   flex-shrink: 0;
-  border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .fence-finish-list {
@@ -3235,63 +3245,6 @@ a.contact-detail-value:hover {
   flex: 1;
   aspect-ratio: 3 / 4;
   min-height: 480px;
-}
-
-.fence-carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(0, 0, 0, 0.45);
-  color: #ffffff;
-  cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.fence-carousel-nav:hover {
-  background: rgba(0, 0, 0, 0.7);
-  border-color: var(--color-primary);
-}
-
-.fence-carousel-nav--prev {
-  left: var(--space-sm);
-}
-
-.fence-carousel-nav--next {
-  right: var(--space-sm);
-}
-
-.fence-carousel-dots {
-  position: absolute;
-  left: 50%;
-  bottom: calc(var(--space-md) + 4.5rem);
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  gap: 0.45rem;
-}
-
-.fence-carousel-dot {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.fence-carousel-dot.active {
-  background: var(--color-primary);
-  transform: scale(1.15);
 }
 
 @media (min-width: 1024px) {

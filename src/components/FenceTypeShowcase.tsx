@@ -1,34 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FENCE_TYPE_OPTIONS } from "@/data/fence-type-options";
 
 export default function FenceTypeShowcase() {
   const [activeTypeId, setActiveTypeId] = useState(FENCE_TYPE_OPTIONS[0].id);
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [activeColorName, setActiveColorName] = useState(
+    FENCE_TYPE_OPTIONS[0].colors?.[0]?.name ?? ""
+  );
 
   const activeType =
     FENCE_TYPE_OPTIONS.find((type) => type.id === activeTypeId) ?? FENCE_TYPE_OPTIONS[0];
 
-  const slides = activeType.gallery?.length
-    ? activeType.gallery
-    : [activeType.image];
+  const activeImage =
+    activeType.colors?.find((color) => color.name === activeColorName)?.image ??
+    activeType.image;
 
-  useEffect(() => {
-    setSlideIndex(0);
-  }, [activeTypeId]);
-
-  const showPrevious = () => {
-    setSlideIndex((current) => (current - 1 + slides.length) % slides.length);
+  const handleTypeSelect = (typeId: string) => {
+    setActiveTypeId(typeId);
+    const type = FENCE_TYPE_OPTIONS.find((item) => item.id === typeId);
+    if (type?.colors?.[0]) {
+      setActiveColorName(type.colors[0].name);
+    }
   };
-
-  const showNext = () => {
-    setSlideIndex((current) => (current + 1) % slides.length);
-  };
-
-  const activeImage = slides[slideIndex] ?? activeType.image;
 
   return (
     <section className="section-dark fence-type-showcase">
@@ -39,8 +34,8 @@ export default function FenceTypeShowcase() {
               <span className="text-mono">Fence Types &amp; Finishes</span>
               <h2 className="heading-no-accent">See What We Install</h2>
               <p>
-                Clear photos of the fence styles we quote and build. Tap a fence type to see
-                available options and browse finished installs.
+                Clear photos of the fence styles we quote and build. Tap a fence type, then choose a
+                vinyl color to preview the finished look.
               </p>
             </div>
 
@@ -52,7 +47,7 @@ export default function FenceTypeShowcase() {
                   role="tab"
                   aria-selected={activeTypeId === type.id}
                   className={`fence-type-tab${activeTypeId === type.id ? " active" : ""}`}
-                  onClick={() => setActiveTypeId(type.id)}
+                  onClick={() => handleTypeSelect(type.id)}
                 >
                   {type.label}
                 </button>
@@ -69,18 +64,30 @@ export default function FenceTypeShowcase() {
             {activeType.colors && (
               <div className="fence-color-options">
                 <span className="fence-color-options-label">Available Colors</span>
-                <ul className="fence-color-list">
+                <div className="fence-color-swatches">
                   {activeType.colors.map((color) => (
-                    <li key={color.name} className="fence-color-item">
+                    <button
+                      key={color.name}
+                      type="button"
+                      className={`fence-color-swatch${activeColorName === color.name ? " active" : ""}`}
+                      onClick={() => setActiveColorName(color.name)}
+                      aria-label={`Preview ${color.name} vinyl`}
+                      aria-pressed={activeColorName === color.name}
+                    >
                       <span
-                        className="fence-color-box"
-                        style={{ backgroundColor: color.swatch }}
-                        aria-hidden="true"
+                        className="fence-color-swatch-dot"
+                        style={{
+                          backgroundColor: color.swatch,
+                          border:
+                            color.name === "White" || color.name === "Tan" || color.name === "Clay"
+                              ? "1px solid rgba(0, 0, 0, 0.15)"
+                              : "1px solid rgba(255, 255, 255, 0.2)",
+                        }}
                       />
                       <span>{color.name}</span>
-                    </li>
+                    </button>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
 
@@ -99,51 +106,16 @@ export default function FenceTypeShowcase() {
               <Image
                 key={activeImage}
                 src={activeImage}
-                alt={`${activeType.label} installed for a residential client`}
+                alt={`${activeType.label}${activeType.colors ? ` in ${activeColorName}` : ""} installed for a residential client`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
                 priority={activeTypeId === "vinyl"}
               />
-
-              {slides.length > 1 && (
-                <>
-                  <button
-                    type="button"
-                    className="fence-carousel-nav fence-carousel-nav--prev"
-                    onClick={showPrevious}
-                    aria-label="Previous photo"
-                  >
-                    <ChevronLeft size={22} />
-                  </button>
-                  <button
-                    type="button"
-                    className="fence-carousel-nav fence-carousel-nav--next"
-                    onClick={showNext}
-                    aria-label="Next photo"
-                  >
-                    <ChevronRight size={22} />
-                  </button>
-                  <div className="fence-carousel-dots" role="tablist" aria-label="Photo slides">
-                    {slides.map((slide, index) => (
-                      <button
-                        key={slide}
-                        type="button"
-                        role="tab"
-                        aria-selected={index === slideIndex}
-                        aria-label={`Show photo ${index + 1}`}
-                        className={`fence-carousel-dot${index === slideIndex ? " active" : ""}`}
-                        onClick={() => setSlideIndex(index)}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-
               <div className="why-image-caption">
                 <h4>{activeType.label}</h4>
                 <p>
-                  {slides.length > 1
+                  {activeType.colors
                     ? "Real installs from our residential jobs."
                     : "Built on site to match your property layout and grade."}
                 </p>
