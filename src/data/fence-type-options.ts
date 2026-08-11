@@ -28,12 +28,12 @@ export const FENCE_TYPE_OPTIONS: FenceTypeOption[] = [
       },
       {
         name: "Tan",
-        image: "/gallery/fencing/vinyl-tan-v2.jpg",
+        image: "/gallery/fencing/vinyl-clay-v2.jpg",
         swatch: "#D2B48C",
       },
       {
         name: "Clay",
-        image: "/gallery/fencing/vinyl-clay-v2.jpg",
+        image: "/gallery/fencing/vinyl-tan-v2.jpg",
         swatch: "#B8956C",
       },
       {
