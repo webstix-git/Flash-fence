@@ -116,7 +116,7 @@ export default function FenceTypeShowcase() {
                 <h4>{activeType.label}</h4>
                 <p>
                   {activeType.colors
-                    ? "Real installs from our residential jobs."
+                    ? `Showing ${activeColorName} vinyl on a finished residential install.`
                     : "Built on site to match your property layout and grade."}
                 </p>
               </div>
