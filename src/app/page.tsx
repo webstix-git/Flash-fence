@@ -97,7 +97,7 @@ export default function Home() {
                 <div>
                   <div className="why-stat-value">100%</div>
                   <div className="why-stat-title">Owner On Site</div>
-                  <p className="why-stat-desc">I run each project personally, start to finish.</p>
+                  <p className="why-stat-desc">Owner onsite for each project.</p>
                 </div>
                 <div>
                   <div className="why-stat-value">365</div>
