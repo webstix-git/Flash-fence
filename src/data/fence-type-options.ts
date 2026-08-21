@@ -55,8 +55,8 @@ export const FENCE_TYPE_OPTIONS: FenceTypeOption[] = [
     id: "chainlink",
     label: "Chain Link & Ornamental",
     summary:
-      "Secure perimeter fencing in galvanized or black or green vinyl-coated chain link, plus ornamental steel pickets for estate and commercial layouts.",
+      "Secure perimeter fencing in galvanized black or green coated chain link, plus ornamental steel pickets for estate and commercial layouts.",
     image: "/gallery/fencing/chain-link-black.png",
-    finishes: ["Galvanized Chain Link", "Black or green vinyl-coated", "Ornamental Steel and Aluminum"],
+    finishes: ["Galvanized black or green coated", "Ornamental Steel and Aluminum"],
   },
 ];

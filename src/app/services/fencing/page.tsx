@@ -10,7 +10,7 @@ export default function FencingService() {
   return (
     <div className="inner-page">
       <PageHero
-        title="Fencing Installation & Design"
+        title="Fencing Design & Installation"
         subtitle="We design and construct premium property boundaries built to secure your yard and safeguard pets."
         backgroundImage="/page-hero-banner.png"
       >
@@ -92,8 +92,8 @@ export default function FencingService() {
           <div className="grid-service-fencing grid-service-fencing--image-left">
             <div className="why-image-panel why-image-panel--fit">
               <Image
-                src="/fencing-chain-link.png"
-                alt="Black vinyl-coated chain link fence installation"
+                src="/fencing-how-built.jpg"
+                alt="Black coated chain link gate installed between residential buildings"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 style={{ objectFit: "cover" }}

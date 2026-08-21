@@ -10,7 +10,7 @@ export default function ExcavationService() {
     <div className="inner-page">
       <PageHero
         title="Site Excavation & Groundwork"
-        subtitle="Reliable, year-round land clearing, grading, and site preparation. From land clearing to site preparation all the way to the finish touches of the restoration of the property."
+        subtitle="Reliable, year-round land clearing, grading, and site preparation. From land clearing to site preparation all the way to the finishing touches of the restoration of the property."
         backgroundImage="/excavation-banner.png"
       >
         <div className="page-hero-actions">
@@ -76,17 +76,17 @@ export default function ExcavationService() {
           <div className="services-grid service-detail-cards">
             <div className="service-card service-card-dark" id="land-clearing" style={{ scrollMarginTop: "6rem" }}>
               <h3>Land &amp; Brush Clearing</h3>
-              <p>Removing thick vegetation, storm debris, small trees, and stubborn stumps. Prepares clean layouts for fences or structures.</p>
+              <p>Removing thick vegetation, storm debris, small trees, and stubborn stumps. Prepares clean layouts for fences or other structures.</p>
             </div>
 
             <div className="service-card service-card-dark" id="compaction" style={{ scrollMarginTop: "6rem" }}>
               <h3>Sub-Grade Compact</h3>
-              <p>Thorough soil compaction and gravel grading to establish stable drainage layers before pouring concrete or asphalt.</p>
+              <p>Thorough soil compaction and gravel grading to establish stable foundation before pouring concrete or asphalt.</p>
             </div>
 
             <div className="service-card service-card-dark" id="utilities" style={{ scrollMarginTop: "6rem" }}>
               <h3>Utility Trenching</h3>
-              <p>Digging out sewer, water, and electrical conduit lines.</p>
+              <p>Digging for sewer, water, and electrical conduit lines.</p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function ExcavationService() {
         title="Need groundwork done right?"
         description="We handle excavation work year-round. Get in touch to schedule a site overview and secure your estimate."
         buttonText="Get A Free Estimate"
-        backgroundImage="/excavation-cta-bg.png"
+        backgroundImage="/excavation-cta-bg.jpg"
         className="inner-page-cta--strong-overlay"
       />
     </div>

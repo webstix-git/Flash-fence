@@ -105,26 +105,26 @@ export default function ServicesIndex() {
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--fencing">Fencing</span>
-              <h3>Chain Link, Steel &amp; Aluminum</h3>
+              <h3>Chain Link, Steel, and Aluminum Ornamental</h3>
               <p>Galvanized and color-coated chain link in black or green, plus steel and aluminum ornamental options.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <h3>Land Clearing &amp; Storm Prep</h3>
-              <p>Removing thick brush, small trees, storm damage, and old fencing. Clean line prep for property development.</p>
+              <h3>Land Clearing &amp; Site Prep</h3>
+              <p>Removing thick brush, small trees, storm damage, and old fencing. General excavation for property development.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <h3>Site &amp; Concrete Prep</h3>
-              <p>Concrete grading and prep work, soil compaction, and digging out sub-bases for pads, patios, driveways, or fence lines.</p>
+              <h3>Concrete Prep &amp; Underground Utilities</h3>
+              <p>Concrete grading and prep work, soil compaction, and digging for water and sewer lines and proper drainage systems.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
-              <h3>Demolition &amp; Utilities</h3>
-              <p>Small demolition projects, concrete removal, and trenching for underground utilities, sewer line, or drainage routing.</p>
+              <h3>Demolition &amp; Storm Cleanup</h3>
+              <p>Small demolition projects, concrete slab removal, and storm damage cleanup.</p>
             </div>
           </div>
         </div>

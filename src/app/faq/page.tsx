@@ -30,7 +30,7 @@ const FAQS = [
     id: 4,
     question: "What excavation services do you handle?",
     answer:
-      "We specialize in small excavation, including: fence line clearing, land clearing, site prep, storm cleanup, concrete prep, minor demolition, and water/sewer ditch prep.",
+      "We specialize in small excavation, including: fence line clearing, land clearing, site prep, storm cleanup, concrete prep, minor demolition, and underground utilities.",
   },
   {
     id: 5,
@@ -136,7 +136,7 @@ export default function FaqPage() {
 
       <InnerPageCta
         title="Still have questions?"
-        description="We are ready to talk layouts, liner foot estimations, or groundwork scopes. Complete the free estimate request form."
+        description="We are ready to talk layouts, linear foot estimations, or groundwork scopes. Complete the free estimate request form."
       />
     </div>
   );
