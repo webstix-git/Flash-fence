@@ -46,7 +46,7 @@ export default function About() {
                 In the modern contracting industry, it is far too common for business owners to sell a job and then pass it off to sub-contractors or unsupervised crews. We built Flash Fence to break that cycle.
               </p>
               <p>
-                From understanding building codes by county to pounding posts and setting vinyl and wood pickets, we lead the installation ourselves. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
+                From understanding building codes by county to pounding posts and setting vinyl and wood pickets, we ensure installation is done properly the first time. This hands-on management guarantees that no corners are cut, posts are set properly, and the site is left immaculate.
               </p>
               <p>
                 Our reputation is anchored in precision. We refuse to run cluttered layouts or deliver subpar results.

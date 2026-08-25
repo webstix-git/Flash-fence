@@ -76,12 +76,12 @@ export default function ExcavationService() {
           <div className="services-grid service-detail-cards">
             <div className="service-card service-card-dark" id="land-clearing" style={{ scrollMarginTop: "6rem" }}>
               <h3>Land &amp; Brush Clearing</h3>
-              <p>Removing thick vegetation, storm debris, small trees, and stubborn stumps. Prepares clean layouts for fences or other structures.</p>
+              <p>Removing thick vegetation, storm debris, small trees, and stumps. Prepares clean layouts for fences or other structures.</p>
             </div>
 
             <div className="service-card service-card-dark" id="compaction" style={{ scrollMarginTop: "6rem" }}>
-              <h3>Sub-Grade Compact</h3>
-              <p>Thorough soil compaction and gravel grading to establish stable foundation before pouring concrete or asphalt.</p>
+              <h3>Site Preparation</h3>
+              <p>Thorough soil compaction and gravel grading to establish proper drainage and stable foundation before pouring concrete or asphalt.</p>
             </div>
 
             <div className="service-card service-card-dark" id="utilities" style={{ scrollMarginTop: "6rem" }}>

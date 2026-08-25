@@ -112,13 +112,13 @@ export default function ServicesIndex() {
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Land Clearing &amp; Site Prep</h3>
-              <p>Removing thick brush, small trees, storm damage, and old fencing. General excavation for property development.</p>
+              <p>Removing thick brush, small trees, and old fencing. General excavation for property development.</p>
             </div>
 
             <div className="service-card service-card-dark">
               <span className="what-we-do-tag what-we-do-tag--excavation">Excavation</span>
               <h3>Concrete Prep &amp; Underground Utilities</h3>
-              <p>Concrete grading and prep work, soil compaction, and digging for water and sewer lines and proper drainage systems.</p>
+              <p>Concrete grading and prep work, and digging for water lines, sewer lines, and proper drainage systems.</p>
             </div>
 
             <div className="service-card service-card-dark">
