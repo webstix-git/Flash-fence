@@ -353,7 +353,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
   height: 120px;
+  min-width: 0;
   transition: height 0.3s ease;
 }
 
@@ -365,11 +367,21 @@ p {
   display: flex;
   align-items: center;
   height: 100%;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .logo-image {
+  display: block;
+  height: 75px;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
   transition: height 0.3s ease;
+}
+
+.logo-image--scrolled {
+  height: 55px;
 }
 
 /* Desktop Menu Navigation */
@@ -384,6 +396,69 @@ p {
     gap: 1.15rem;
     flex-wrap: nowrap;
     white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+}
+
+.header-call-btn {
+  flex-shrink: 0;
+  gap: var(--space-xs);
+}
+
+.header-call-label-short {
+  display: none;
+}
+
+/* ~1024px: smaller logo so full Call number + nav fit with proper spacing */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .header-container {
+    height: 96px;
+    gap: 1rem;
+  }
+
+  .header-wrapper.scrolled .header-container {
+    height: 72px;
+  }
+
+  .logo-image {
+    height: 48px;
+  }
+
+  .logo-image--scrolled {
+    height: 40px;
+  }
+
+  .nav-desktop {
+    gap: 0.9rem;
+  }
+
+  .nav-desktop .nav-link {
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+  }
+
+  .header-call-btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .header-call-label {
+    display: inline;
+  }
+
+  .header-call-label-short {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-call-label-short {
+    display: none;
+  }
+
+  .header-call-label {
+    display: inline;
   }
 }
 
@@ -680,7 +755,8 @@ section {
   max-height: 800px;
   min-height: 0;
   height: auto;
-  padding-top: 120px; /* Accounts for header */
+  /* Header is 120px — keep a clear gap under the logo */
+  padding-top: 160px;
   padding-bottom: var(--space-lg);
   box-sizing: border-box;
   overflow: hidden;
@@ -704,15 +780,54 @@ section {
     width: 100%;
     height: 800px;
     max-height: 800px;
-    background-size: auto 800px;
+    background-size: cover;
     background-position: center center;
   }
 }
 
+/* ~1024px laptops: ratio box is too short; give room under header + fill image */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 580px;
+    max-height: none;
+    padding-top: 168px;
+    padding-bottom: var(--space-xl);
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-content {
+    max-width: min(640px, 100%);
+    padding-top: var(--space-sm);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 3.2vw, 2.5rem);
+    line-height: 1.12;
+  }
+
+  .hero-subtitle {
+    max-width: 36rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablet / mid screens (incl. 768px): unlock short ratio so text + CTA fit */
 @media (max-width: 1023px) {
   .hero {
-    padding-top: 100px;
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 560px;
     max-height: none;
+    /* Header is 120px — clear it and leave a visible gap before the headline */
+    padding-top: 152px;
+    padding-bottom: var(--space-xl);
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center center;
   }
 
   .hero::before {
@@ -722,23 +837,66 @@ section {
     position: absolute;
     inset: 0;
   }
+
+  .hero-content {
+    max-width: 100%;
+    padding-top: var(--space-md);
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 4.5vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    max-width: 34rem;
+    font-size: 1.05rem;
+    margin-bottom: var(--space-md);
+  }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 88px;
-    padding-bottom: var(--space-md);
-    background-size: contain;
+    min-height: 520px;
+    /* Extra room under fixed logo + sticky bottom bar */
+    padding-top: 148px;
+    padding-bottom: calc(var(--space-xl) + 60px);
+    align-items: flex-start;
+    background-size: cover;
     background-position: center center;
   }
 
+  .hero-content {
+    padding-top: var(--space-sm);
+  }
+
   .hero h1 {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    margin-top: 0;
   }
 
   .hero-subtitle {
     font-size: 0.95rem;
     margin-bottom: var(--space-md);
+  }
+}
+
+/* Slightly tighter header on small phones so logo doesn't crowd the hero */
+@media (max-width: 640px) {
+  .header-container {
+    height: 96px;
+  }
+
+  .header-wrapper.scrolled .header-container {
+    height: 72px;
+  }
+
+  .logo-image {
+    height: 58px;
+  }
+
+  .logo-image--scrolled {
+    height: 46px;
   }
 }
 
@@ -930,6 +1088,7 @@ section {
 .why-split-content h2 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   margin-bottom: var(--space-md);
+  max-width: 100%;
 }
 
 .why-split-content h2::after {
