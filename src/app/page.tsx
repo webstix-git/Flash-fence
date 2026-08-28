@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   MapPin,
   Phone,
@@ -14,6 +13,7 @@ import { GALLERY_PROJECTS } from "@/data/gallery-projects";
 import { TESTIMONIALS } from "@/data/testimonials";
 import GalleryGrid from "@/components/GalleryGrid";
 import ReviewsBlock from "@/components/ReviewsBlock";
+import HomeHero from "@/components/HomeHero";
 
 const HOMEPAGE_TESTIMONIALS = TESTIMONIALS.slice(0, 3);
 
@@ -37,42 +37,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* 1. Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-            >
-              Built-To-Last <br />
-              <span style={{ color: "var(--color-primary)" }}>Fencing & Excavation</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="hero-subtitle"
-            >
-              High-performance property boundaries and groundwork built for Wisconsin weather. 
-              Get perfectionist craftsmanship on every job.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="hero-actions"
-            >
-              <Link href="/contact" className="btn btn-primary">
-                Get A Free Estimate
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
       {/* Divider */}
       <div className="divider-line"></div>

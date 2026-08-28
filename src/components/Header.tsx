@@ -46,13 +46,7 @@ export default function Header() {
             width={240}
             height={68}
             priority
-            className="logo-image"
-            style={{
-              height: scrolled ? "55px" : "75px",
-              width: "auto",
-              objectFit: "contain",
-              display: "block"
-            }}
+            className={`logo-image${scrolled ? " logo-image--scrolled" : ""}`}
           />
         </Link>
 
@@ -97,9 +91,10 @@ export default function Header() {
             Contact Us
           </Link>
 
-          <a href="tel:715-299-0663" className="btn btn-primary btn-compact">
-            <Phone size={16} style={{ marginRight: "var(--space-xs)" }} />
-            Call 715-299-0663
+          <a href="tel:715-299-0663" className="btn btn-primary btn-compact header-call-btn">
+            <Phone size={16} />
+            <span className="header-call-label">Call 715-299-0663</span>
+            <span className="header-call-label-short">Call</span>
           </a>
         </nav>
 
