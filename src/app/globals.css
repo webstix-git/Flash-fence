@@ -782,9 +782,61 @@ section {
   display: none;
 }
 
+@media (min-width: 1921px) {
+  .hero {
+    aspect-ratio: auto;
+    width: 100%;
+    height: 800px;
+    max-height: 800px;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* ~1024px laptops: ratio box is too short; give room under header + fill image */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 580px;
+    max-height: none;
+    padding-top: 168px;
+    padding-bottom: var(--space-xl);
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-content {
+    max-width: min(640px, 100%);
+    padding-top: var(--space-sm);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 3.2vw, 2.5rem);
+    line-height: 1.12;
+  }
+
+  .hero-subtitle {
+    max-width: 36rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablet / mid screens (incl. 768px): unlock short ratio so text + CTA fit */
 @media (max-width: 1023px) {
   .hero {
     background-image: none;
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 560px;
+    max-height: none;
+    /* Header is 120px — clear it and leave a visible gap before the headline */
+    padding-top: 152px;
+    padding-bottom: var(--space-xl);
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center center;
   }
 
   .hero-slideshow {
@@ -843,63 +895,6 @@ section {
     flex-direction: column;
     align-items: stretch;
   }
-}
-
-@media (min-width: 1921px) {
-  .hero {
-    aspect-ratio: auto;
-    width: 100%;
-    height: 800px;
-    max-height: 800px;
-    background-size: cover;
-    background-position: center center;
-  }
-}
-
-/* ~1024px laptops: ratio box is too short; give room under header + fill image */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .hero {
-    aspect-ratio: auto;
-    height: auto;
-    min-height: 580px;
-    max-height: none;
-    padding-top: 168px;
-    padding-bottom: var(--space-xl);
-    align-items: flex-start;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .hero-content {
-    max-width: min(640px, 100%);
-    padding-top: var(--space-sm);
-  }
-
-  .hero h1 {
-    font-size: clamp(2.15rem, 3.2vw, 2.5rem);
-    line-height: 1.12;
-  }
-
-  .hero-subtitle {
-    max-width: 36rem;
-    font-size: 1.05rem;
-  }
-}
-
-/* Tablet / mid screens (incl. 768px): unlock short ratio so text + CTA fit */
-@media (max-width: 1023px) {
-  .hero {
-    aspect-ratio: auto;
-    height: auto;
-    min-height: 560px;
-    max-height: none;
-    /* Header is 120px — clear it and leave a visible gap before the headline */
-    padding-top: 152px;
-    padding-bottom: var(--space-xl);
-    align-items: flex-start;
-    background-size: cover;
-    background-position: center center;
-  }
 
   .hero::before {
     content: "";
@@ -912,6 +907,67 @@ section {
 
   .hero .container {
     z-index: 2;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-top: var(--space-md);
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 4.5vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    max-width: 34rem;
+    font-size: 1.05rem;
+    margin-bottom: var(--space-md);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 520px;
+    /* Extra room under fixed logo + sticky bottom bar */
+    padding-top: 148px;
+    padding-bottom: calc(var(--space-xl) + 60px);
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-content {
+    padding-top: var(--space-sm);
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    margin-top: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+  }
+}
+
+/* Slightly tighter header on small phones so logo doesn't crowd the hero */
+@media (max-width: 640px) {
+  .header-container {
+    height: 96px;
+  }
+
+  .header-wrapper.scrolled .header-container {
+    height: 72px;
+  }
+
+  .logo-image {
+    height: 58px;
+  }
+
+  .logo-image--scrolled {
+    height: 46px;
   }
 
   .hero-content {
