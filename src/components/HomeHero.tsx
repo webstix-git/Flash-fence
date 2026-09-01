@@ -1,41 +1,50 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone } from "lucide-react";
 
-const MOBILE_HERO_SLIDES = [
+const HERO_SLIDES = [
   {
-    src: "/hero-slide-grading-v2.jpg",
+    src: "/excavation.jpg",
+    alt: "Bobcat excavator grading a residential lot for site preparation",
     objectPosition: "left center",
   },
   {
-    src: "/hero-slide-pool.jpg",
+    src: "/pool-fence.jpg",
+    alt: "Chain link pool fence surrounding a backyard swimming pool",
     objectPosition: "center center",
   },
-];
+] as const;
 
 const PHONE_NUMBER = "715-299-0663";
 const PHONE_HREF = "tel:715-299-0663";
+const AUTOPLAY_MS = 6000;
 
 export default function HomeHero() {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [autoplayKey, setAutoplayKey] = useState(0);
+
+  const goToSlide = useCallback((index: number) => {
+    setSlideIndex((index + HERO_SLIDES.length) % HERO_SLIDES.length);
+    setAutoplayKey((key) => key + 1);
+  }, []);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setSlideIndex((current) => (current + 1) % MOBILE_HERO_SLIDES.length);
-    }, 5000);
+      setSlideIndex((current) => (current + 1) % HERO_SLIDES.length);
+    }, AUTOPLAY_MS);
 
     return () => window.clearInterval(timer);
-  }, []);
+  }, [autoplayKey]);
 
-  const activeSlide = MOBILE_HERO_SLIDES[slideIndex];
+  const activeSlide = HERO_SLIDES[slideIndex];
 
   return (
     <section className="hero">
-      <div className="hero-slideshow" aria-hidden="true">
+      <div className="hero-slideshow">
         <AnimatePresence mode="sync">
           <motion.div
             key={activeSlide.src}
@@ -47,11 +56,10 @@ export default function HomeHero() {
           >
             <Image
               src={activeSlide.src}
-              alt=""
+              alt={activeSlide.alt}
               fill
               priority={slideIndex === 0}
               sizes="100vw"
-              className={activeSlide.objectPosition === "left center" ? "hero-slide-image--left" : undefined}
               style={{
                 objectFit: activeSlide.objectPosition === "left center" ? "contain" : "cover",
                 objectPosition: activeSlide.objectPosition,
@@ -59,14 +67,17 @@ export default function HomeHero() {
             />
           </motion.div>
         </AnimatePresence>
-        <div className="hero-slideshow-dots">
-          {MOBILE_HERO_SLIDES.map((slide, index) => (
+
+        <div className="hero-slideshow-dots" role="tablist" aria-label="Hero photo navigation">
+          {HERO_SLIDES.map((slide, index) => (
             <button
               key={slide.src}
               type="button"
+              role="tab"
+              aria-selected={index === slideIndex}
               className={`hero-slideshow-dot${index === slideIndex ? " active" : ""}`}
               aria-label={`Show hero photo ${index + 1}`}
-              onClick={() => setSlideIndex(index)}
+              onClick={() => goToSlide(index)}
             />
           ))}
         </div>

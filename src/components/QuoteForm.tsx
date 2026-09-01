@@ -5,9 +5,38 @@ import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 interface QuoteFormProps {
   variant?: "dark" | "light";
+  actionUrl?: string;
 }
 
-export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
+const DEFAULT_FORM_ACTION = "/api/quote";
+
+type QuoteFormValues = {
+  name: string;
+  phone: string;
+  email: string;
+  serviceType: string;
+  details: string;
+};
+
+async function sendSmsNotification(formValues: QuoteFormValues) {
+  const res = await fetch(DEFAULT_FORM_ACTION, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formValues),
+  });
+
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    console.error("SMS notification failed:", data.error || res.statusText);
+  }
+
+  return res.ok;
+}
+
+export default function QuoteForm({
+  variant = "dark",
+  actionUrl = DEFAULT_FORM_ACTION,
+}: QuoteFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -36,17 +65,37 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
     setFeedbackMessage("");
 
     try {
-      const res = await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const payload = new FormData();
+      payload.append("name", formData.name);
+      payload.append("phone", formData.phone);
+      payload.append("email", formData.email);
+      payload.append("serviceType", formData.serviceType);
+      payload.append("details", formData.details);
 
-      const data = await res.json();
+      const usesExternalAction = actionUrl !== DEFAULT_FORM_ACTION;
+
+      const [supabaseRes] = await Promise.all([
+        fetch(actionUrl, {
+          method: "POST",
+          body: payload,
+        }),
+        usesExternalAction ? sendSmsNotification(formData) : Promise.resolve(true),
+      ]);
+
+      const res = supabaseRes;
+
+      let data: { message?: string; error?: string } = {};
+      try {
+        data = await res.json();
+      } catch {
+        data = {};
+      }
 
       if (res.ok) {
         setStatus("success");
-        setFeedbackMessage(data.message || "Your quote request has been sent! I will text or call you shortly.");
+        setFeedbackMessage(
+          data.message || "Your quote request has been sent! I will text or call you shortly."
+        );
         // Reset form
         setFormData({
           name: "",
@@ -95,7 +144,12 @@ export default function QuoteForm({ variant = "dark" }: QuoteFormProps) {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="form-grid">
+      <form
+        action={actionUrl}
+        method="POST"
+        onSubmit={handleSubmit}
+        className="form-grid"
+      >
         {/* Name */}
         <div className="form-group">
           <label htmlFor="name" className="form-label">

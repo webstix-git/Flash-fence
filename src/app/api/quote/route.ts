@@ -1,11 +1,34 @@
 import { NextResponse } from "next/server";
+import { buildQuoteSmsMessage, sendQuoteSms } from "@/lib/twilio-sms";
+
+async function parseQuoteRequest(request: Request) {
+  const contentType = request.headers.get("content-type") || "";
+
+  if (contentType.includes("application/json")) {
+    const body = await request.json();
+    return {
+      name: body.name as string | undefined,
+      phone: body.phone as string | undefined,
+      email: body.email as string | undefined,
+      serviceType: body.serviceType as string | undefined,
+      details: body.details as string | undefined,
+    };
+  }
+
+  const formData = await request.formData();
+  return {
+    name: formData.get("name")?.toString(),
+    phone: formData.get("phone")?.toString(),
+    email: formData.get("email")?.toString(),
+    serviceType: formData.get("serviceType")?.toString(),
+    details: formData.get("details")?.toString(),
+  };
+}
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { name, phone, email, serviceType, details } = body;
+    const { name, phone, email, serviceType, details } = await parseQuoteRequest(request);
 
-    // Server-side validation
     if (!name || !phone) {
       return NextResponse.json(
         { error: "Name and phone number are required fields." },
@@ -13,47 +36,30 @@ export async function POST(request: Request) {
       );
     }
 
-    // Generate SMS text payload for Dylan
-    const smsMessage = `
-⚡ NEW FLASH FENCE LEAD ⚡
-Name: ${name}
-Phone: ${phone}
-Email: ${email || "Not provided"}
-Service: ${serviceType.toUpperCase()}
-Details: ${details || "No details provided"}
-    `.trim();
+    const smsMessage = buildQuoteSmsMessage({
+      name,
+      phone,
+      email,
+      serviceType,
+      details,
+    });
 
-    // Console log the SMS notification as simulated dispatcher
-    console.log("==========================================");
-    console.log("SIMULATING SMS DISPATCH TO DYLAN GARDOW...");
-    console.log(`Recipient: 715-299-0663`);
-    console.log("------------------------------------------");
-    console.log(smsMessage);
-    console.log("==========================================");
-
-    /* 
-      Example Twilio Integration:
-      
-      const accountSid = process.env.TWILIO_ACCOUNT_SID;
-      const authToken = process.env.TWILIO_AUTH_TOKEN;
-      const client = require('twilio')(accountSid, authToken);
-
-      await client.messages.create({
-        body: smsMessage,
-        from: process.env.TWILIO_PHONE_NUMBER, // Twilio SMS number
-        to: '7152990663' // Dylan's phone number
-      });
-    */
+    const smsResult = await sendQuoteSms(smsMessage);
 
     return NextResponse.json(
       {
-        message: "Estimate request received! I've been notified via text and will contact you shortly.",
-        smsDispatched: true,
+        message: smsResult.ok
+          ? "Estimate request received! I've been notified via text and will contact you shortly."
+          : "Estimate request received! We will contact you shortly.",
+        smsDispatched: smsResult.ok,
+        ...(process.env.NODE_ENV === "development" && !smsResult.ok && smsResult.detail
+          ? { smsError: smsResult.detail }
+          : {}),
       },
       { status: 200 }
     );
   } catch (error) {
-    console.error("API error:", error);
+    console.error("Quote API error:", error);
     return NextResponse.json(
       { error: "Internal server error. Please call us directly at 715-299-0663." },
       { status: 500 }

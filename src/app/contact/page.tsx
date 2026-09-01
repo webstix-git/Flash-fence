@@ -25,7 +25,10 @@ export default function ContactPage() {
       <section className="section-light contact-page-section">
         <div className="container">
           <div className="contact-split">
-            <QuoteForm variant="light" />
+            <QuoteForm
+              variant="light"
+              actionUrl="https://ywwxvriolxwuqcwjaluh.supabase.co/functions/v1/form-submit/1e03fc62-f16a-4547-910a-c013b4222b35"
+            />
 
             <div className="contact-info-panel">
               <span className="text-mono">Contact Info</span>
