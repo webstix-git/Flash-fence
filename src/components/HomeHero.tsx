@@ -18,11 +18,6 @@ const HERO_SLIDES = [
     objectPosition: "center center",
   },
   {
-    src: "/wodden-fence.jpg",
-    alt: "Wood privacy fence with mulch bed and hostas along the fence line",
-    objectPosition: "left center",
-  },
-  {
     src: "/white-fence.jpg",
     alt: "White vinyl privacy fence along a green Wisconsin lawn",
     objectPosition: "left center",
@@ -30,6 +25,11 @@ const HERO_SLIDES = [
   {
     src: "/wodden-fence-inside.jpg",
     alt: "Wood privacy fence installed between residential properties",
+    objectPosition: "left center",
+  },
+  {
+    src: "/wodden-fence.jpg",
+    alt: "Wood privacy fence with mulch bed and hostas along the fence line",
     objectPosition: "left center",
   },
 ] as const;
