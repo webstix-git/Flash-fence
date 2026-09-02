@@ -17,6 +17,21 @@ const HERO_SLIDES = [
     alt: "Chain link pool fence surrounding a backyard swimming pool",
     objectPosition: "center center",
   },
+  {
+    src: "/wodden-fence.jpg",
+    alt: "Wood privacy fence with mulch bed and hostas along the fence line",
+    objectPosition: "left center",
+  },
+  {
+    src: "/white-fence.jpg",
+    alt: "White vinyl privacy fence along a green Wisconsin lawn",
+    objectPosition: "left center",
+  },
+  {
+    src: "/wodden-fence-inside.jpg",
+    alt: "Wood privacy fence installed between residential properties",
+    objectPosition: "left center",
+  },
 ] as const;
 
 const PHONE_NUMBER = "715-299-0663";
@@ -61,7 +76,7 @@ export default function HomeHero() {
               priority={slideIndex === 0}
               sizes="100vw"
               style={{
-                objectFit: activeSlide.objectPosition === "left center" ? "contain" : "cover",
+                objectFit: "cover",
                 objectPosition: activeSlide.objectPosition,
               }}
             />
