@@ -769,7 +769,17 @@ section {
 .hero-slide {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-color: #000;
+}
+
+.hero-slideshow::before {
+  content: "";
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to right, #000000ba 0%, #0000008f 55%, #0000000d 100%);
+  position: absolute;
+  inset: 0;
 }
 
 .hero-slideshow-dots {
@@ -893,6 +903,10 @@ section {
     max-height: 340px;
     margin-top: 0;
     flex-shrink: 0;
+  }
+
+  .hero-slideshow::before {
+    content: none;
   }
 
   .hero .container {
