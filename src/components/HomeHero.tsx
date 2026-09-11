@@ -8,29 +8,29 @@ import { Phone } from "lucide-react";
 
 const HERO_SLIDES = [
   {
-    src: "/excavation.jpg",
-    alt: "Bobcat excavator grading a residential lot for site preparation",
-    objectPosition: "left center",
-  },
-  {
-    src: "/pool-fence.jpg",
-    alt: "Chain link pool fence surrounding a backyard swimming pool",
+    src: "/order1.png",
+    alt: "Black chain link fence enclosing a backyard swimming pool",
     objectPosition: "center center",
   },
   {
-    src: "/white-fence.jpg",
-    alt: "White vinyl privacy fence along a green Wisconsin lawn",
+    src: "/order2.png",
+    alt: "Bobcat skid steer grading a residential lot for site preparation",
     objectPosition: "left center",
   },
   {
-    src: "/wodden-fence-inside.jpg",
-    alt: "Wood privacy fence installed between residential properties",
+    src: "/order-3.png",
+    alt: "White vinyl privacy fence along a residential property line",
     objectPosition: "left center",
   },
   {
-    src: "/wodden-fence.jpg",
-    alt: "Wood privacy fence with mulch bed and hostas along the fence line",
-    objectPosition: "left center",
+    src: "/order-4.png",
+    alt: "John Deere excavator preparing a commercial construction site",
+    objectPosition: "center center",
+  },
+  {
+    src: "/order-5.png",
+    alt: "Black chain link fence enclosing a tree-lined residential yard",
+    objectPosition: "center center",
   },
 ] as const;
 
