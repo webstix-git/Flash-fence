@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Script from "next/script";
+import { TURNSTILE_SITE_KEY } from "@/lib/site";
 
 type TurnstileWidgetProps = {
   theme?: "light" | "dark";
@@ -45,15 +46,13 @@ export default function TurnstileWidget({
   onTokenRef.current = onToken;
   onExpireRef.current = onExpire;
 
-  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-
   const renderWidget = () => {
-    if (!window.turnstile || !containerRef.current || !siteKey || widgetIdRef.current) {
+    if (!window.turnstile || !containerRef.current || widgetIdRef.current) {
       return;
     }
 
     widgetIdRef.current = window.turnstile.render(containerRef.current, {
-      sitekey: siteKey,
+      sitekey: TURNSTILE_SITE_KEY,
       theme,
       callback: (token) => onTokenRef.current(token),
       "expired-callback": () => onExpireRef.current?.(),
@@ -70,7 +69,7 @@ export default function TurnstileWidget({
         widgetIdRef.current = null;
       }
     };
-  }, [siteKey, theme]);
+  }, [theme]);
 
   useEffect(() => {
     if (!resetSignal || !widgetIdRef.current || !window.turnstile) {
@@ -80,14 +79,6 @@ export default function TurnstileWidget({
     window.turnstile.reset(widgetIdRef.current);
     onExpireRef.current?.();
   }, [resetSignal]);
-
-  if (!siteKey) {
-    return (
-      <p className="form-card-subtext" style={{ margin: 0 }}>
-        Captcha is not configured. Add NEXT_PUBLIC_TURNSTILE_SITE_KEY to enable it.
-      </p>
-    );
-  }
 
   return (
     <>

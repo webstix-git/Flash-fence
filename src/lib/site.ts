@@ -7,6 +7,9 @@ export const SITE_EMAIL = "flashfencewi@gmail.com";
 export const SITE_FACEBOOK =
   "https://www.facebook.com/p/Flash-Fence-61556697906995/";
 
+export const TURNSTILE_SITE_KEY =
+  process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAE1w0QPd1nZR55ZZ";
+
 export type SitePage = {
   path: string;
   title: string;
