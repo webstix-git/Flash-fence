@@ -3223,6 +3223,48 @@ section {
   padding-bottom: var(--space-xxl);
 }
 
+.thank-you-section {
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xxl);
+}
+
+.thank-you-card {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thank-you-icon {
+  color: var(--color-success);
+  margin-bottom: var(--space-md);
+}
+
+.thank-you-heading {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin: 0 0 var(--space-md);
+}
+
+.thank-you-copy {
+  color: rgba(0, 0, 0, 0.72);
+  line-height: 1.65;
+  margin: 0 auto var(--space-md);
+  max-width: 38rem;
+}
+
+.thank-you-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.thank-you-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
 .contact-info-heading {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   margin: var(--space-xs) 0 var(--space-sm);

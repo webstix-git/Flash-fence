@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Send, AlertCircle, Loader2 } from "lucide-react";
 import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface QuoteFormProps {
@@ -15,6 +16,7 @@ export default function QuoteForm({
   variant = "dark",
   actionUrl = DEFAULT_FORM_ACTION,
 }: QuoteFormProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -23,7 +25,7 @@ export default function QuoteForm({
     details: "",
   });
 
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const [turnstileToken, setTurnstileToken] = useState("");
   const [turnstileReset, setTurnstileReset] = useState(0);
@@ -99,18 +101,7 @@ export default function QuoteForm({
         }
       }
 
-      setStatus("success");
-      setFeedbackMessage(
-        data.message || "Your quote request has been sent! I will text or call you shortly."
-      );
-      resetCaptcha();
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        serviceType: "fencing",
-        details: "",
-      });
+      router.replace("/thank-you");
     } catch (err) {
       console.error("Submission error:", err);
       resetCaptcha();
@@ -118,25 +109,6 @@ export default function QuoteForm({
       setFeedbackMessage("Connection error. Please check your signal or call 715-299-0663 directly.");
     }
   };
-
-  if (status === "success") {
-    return (
-      <div className={`form-card${variant === "light" ? " form-card--light" : ""}`} style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", minHeight: "350px" }}>
-        <CheckCircle2 size={64} style={{ color: "var(--color-success)", marginBottom: "var(--space-md)" }} />
-        <h3 className="form-card-title">Request Received!</h3>
-        <p className="form-card-subtext" style={{ maxWidth: "450px" }}>
-          {feedbackMessage}
-        </p>
-        <button
-          className="btn btn-secondary"
-          style={{ marginTop: "var(--space-lg)" }}
-          onClick={() => setStatus("idle")}
-        >
-          Submit Another Request
-        </button>
-      </div>
-    );
-  }
 
   return (
     <div className={`form-card${variant === "light" ? " form-card--light" : ""}`} id="quote-form-anchor">

@@ -4,7 +4,7 @@ import { SITE_PAGES, absoluteUrl } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return SITE_PAGES.map((page) => ({
+  return SITE_PAGES.filter((page) => page.inSitemap !== false).map((page) => ({
     url: absoluteUrl(page.path),
     lastModified,
     changeFrequency: page.changeFrequency,

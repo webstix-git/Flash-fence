@@ -16,6 +16,7 @@ export type SitePage = {
   description: string;
   changeFrequency: "weekly" | "monthly" | "yearly";
   priority: number;
+  inSitemap?: boolean;
 };
 
 export const SITE_PAGES: SitePage[] = [
@@ -42,6 +43,15 @@ export const SITE_PAGES: SitePage[] = [
       "Request a free fencing or excavation estimate in Eau Claire, WI. Call or text 715-299-0663 or send a quote request to Flash Fence.",
     changeFrequency: "monthly",
     priority: 0.9,
+  },
+  {
+    path: "/thank-you",
+    title: "Thank You",
+    description:
+      "Your Flash Fence estimate request has been received. We will text or call you shortly to talk through your fencing or excavation project.",
+    changeFrequency: "yearly",
+    priority: 0.2,
+    inSitemap: false,
   },
   {
     path: "/gallery",
