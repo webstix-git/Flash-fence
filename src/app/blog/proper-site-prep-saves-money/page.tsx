@@ -86,7 +86,7 @@ export default function ProperSitePrepSavesMoneyPost() {
               Let us review your site and map out the prep work that will protect your budget and your finished
               results.
             </p>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact-us" className="btn btn-primary">
               Get A Free Estimate
             </Link>
           </div>

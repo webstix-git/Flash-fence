@@ -85,7 +85,7 @@ export default function IncreaseHomeValueFencePost() {
             <p>
               We can help you choose a fence style that improves curb appeal and supports long-term home value.
             </p>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact-us" className="btn btn-primary">
               Get A Free Estimate
             </Link>
           </div>

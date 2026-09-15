@@ -14,7 +14,7 @@ export default function SitePrepService() {
         backgroundImage="/site-prep-banner.png"
       >
         <div className="page-hero-actions">
-          <a href="/contact" className="btn btn-primary">Get A Free Estimate</a>
+          <a href="/contact-us" className="btn btn-primary">Get A Free Estimate</a>
           <a href="tel:715-299-0663" className="btn btn-secondary">Request Call</a>
         </div>
       </PageHero>

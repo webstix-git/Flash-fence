@@ -1,9 +1,19 @@
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata, webPageJsonLd } from "@/lib/seo";
+
+export const metadata = pageMetadata("/privacy");
 
 export default function PrivacyPage() {
   return (
     <div className="inner-page legal-page">
+      <JsonLd
+        data={webPageJsonLd("/privacy", [
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy" },
+        ])}
+      />
       <PageHero
         eyebrow="Regulatory compliance"
         title="Privacy Policy"

@@ -1,9 +1,19 @@
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata, webPageJsonLd } from "@/lib/seo";
+
+export const metadata = pageMetadata("/ai-policy");
 
 export default function AiPolicyPage() {
   return (
     <div className="inner-page legal-page">
+      <JsonLd
+        data={webPageJsonLd("/ai-policy", [
+          { name: "Home", path: "/" },
+          { name: "AI Policy", path: "/ai-policy" },
+        ])}
+      />
       <PageHero
         eyebrow="Automation Transparency"
         title="AI Policy & Operations"

@@ -5,10 +5,18 @@ import Link from "next/link";
 import InnerPageCta from "@/components/InnerPageCta";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { collectionJsonLd } from "@/lib/seo";
 
 export default function ServicesIndex() {
   return (
     <div className="inner-page">
+      <JsonLd
+        data={collectionJsonLd("/services", "CollectionPage", [
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ])}
+      />
       <PageHero
         eyebrow="What We Do"
         title="One Shop. Fence & Ground."

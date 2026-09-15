@@ -55,7 +55,7 @@ export default function Header() {
           <Link href="/" className="nav-link">
             Home
           </Link>
-          <Link href="/about" className="nav-link">
+          <Link href="/about-us" className="nav-link">
             About Us
           </Link>
 
@@ -87,7 +87,7 @@ export default function Header() {
             FAQs
           </Link>
 
-          <Link href="/contact" className="nav-link">
+          <Link href="/contact-us" className="nav-link">
             Contact Us
           </Link>
 
@@ -149,7 +149,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="mobile-menu-link" onClick={toggleMobileMenu}>
+            <Link href="/contact-us" className="mobile-menu-link" onClick={toggleMobileMenu}>
               Contact Us
             </Link>
           </li>

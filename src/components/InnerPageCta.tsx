@@ -15,7 +15,7 @@ export default function InnerPageCta({
   title,
   description,
   buttonText = "Get A Free Estimate",
-  buttonHref = "/contact",
+  buttonHref = "/contact-us",
   backgroundImage = "/completed-vinyl-installation.jpg",
   className = "",
   id,

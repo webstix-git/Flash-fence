@@ -2386,6 +2386,11 @@ section {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.required-asterisk {
+  color: #e11b22;
+  margin-left: 0.15em;
+}
+
 .form-input, .form-select, .form-textarea {
   background-color: var(--color-secondary);
   border: 1.5px solid rgba(255, 255, 255, 0.15);

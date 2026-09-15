@@ -231,7 +231,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact-us" className="btn btn-primary">
                 Get A Free Estimate
               </Link>
             </div>
@@ -399,7 +399,7 @@ export default function Home() {
           </p>
 
           <div className="cta-banner-actions">
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact-us" className="btn btn-primary">
               Get A Free Estimate
             </Link>
             <a href="tel:715-299-0663" className="btn btn-secondary">

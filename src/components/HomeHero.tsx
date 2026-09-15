@@ -125,7 +125,7 @@ export default function HomeHero() {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="hero-actions"
           >
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact-us" className="btn btn-primary">
               Get A Free Estimate
             </Link>
             <a href={PHONE_HREF} className="btn btn-secondary hero-phone-cta">

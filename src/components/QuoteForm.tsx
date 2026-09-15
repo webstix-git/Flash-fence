@@ -153,7 +153,7 @@ export default function QuoteForm({
         {/* Name */}
         <div className="form-group">
           <label htmlFor="name" className="form-label">
-            Your Name *
+            Your Name <span className="required-asterisk" aria-hidden="true">*</span>
           </label>
           <input
             type="text"
@@ -171,7 +171,7 @@ export default function QuoteForm({
         {/* Phone */}
         <div className="form-group">
           <label htmlFor="phone" className="form-label">
-            Phone Number *
+            Phone Number <span className="required-asterisk" aria-hidden="true">*</span>
           </label>
           <input
             type="tel"
@@ -206,7 +206,7 @@ export default function QuoteForm({
         {/* Service Type */}
         <div className="form-group">
           <label htmlFor="serviceType" className="form-label">
-            Select Service *
+            Select Service <span className="required-asterisk" aria-hidden="true">*</span>
           </label>
           <select
             id="serviceType"

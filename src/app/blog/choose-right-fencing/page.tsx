@@ -84,7 +84,7 @@ export default function ChooseRightFencingPost() {
               We can walk your property with you and recommend the best fencing option for privacy, pets, and long-term
               value.
             </p>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact-us" className="btn btn-primary">
               Get A Free Estimate
             </Link>
           </div>

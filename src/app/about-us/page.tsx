@@ -181,7 +181,7 @@ export default function About() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact-us" className="btn btn-primary">
                 Start Your Quote
               </Link>
             </div>

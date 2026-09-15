@@ -5,10 +5,18 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { collectionJsonLd } from "@/lib/seo";
 
 export default function BlogIndex() {
   return (
     <div className="inner-page">
+      <JsonLd
+        data={collectionJsonLd("/blog", "Blog", [
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+        ])}
+      />
       <PageHero
         eyebrow="Wisconsin Trade Insights"
         title="Flash Fence Blog & Insights"

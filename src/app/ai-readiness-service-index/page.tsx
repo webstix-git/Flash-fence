@@ -1,6 +1,10 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata, webPageJsonLd } from "@/lib/seo";
+
+export const metadata = pageMetadata("/ai-readiness-service-index");
 
 const BUSINESS_PROFILE = [
   { label: "Legal Name", value: "Flash Fence LLC" },
@@ -17,7 +21,7 @@ const BUSINESS_PROFILE = [
   },
   {
     label: "Quote Request",
-    value: <Link href="/contact">/contact</Link>,
+    value: <Link href="/contact-us">/contact-us</Link>,
   },
   {
     label: "Warranty",
@@ -90,11 +94,11 @@ const SERVICE_INDEX = [
 
 const KEY_PAGES = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
+  { href: "/about-us", label: "About Us" },
   { href: "/services", label: "All Services" },
   { href: "/gallery", label: "Project Gallery" },
   { href: "/faq", label: "FAQs" },
-  { href: "/contact", label: "Contact & Free Quote" },
+  { href: "/contact-us", label: "Contact & Free Quote" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/ai-policy", label: "AI Policy" },
   { href: "/sitemap", label: "HTML Sitemap" },
@@ -103,6 +107,12 @@ const KEY_PAGES = [
 export default function AiReadinessServiceIndexPage() {
   return (
     <div className="inner-page">
+      <JsonLd
+        data={webPageJsonLd("/ai-readiness-service-index", [
+          { name: "Home", path: "/" },
+          { name: "AI Readiness Service Index", path: "/ai-readiness-service-index" },
+        ])}
+      />
       <PageHero
         eyebrow="Structured Service Directory"
         title="AI Readiness Service Index"

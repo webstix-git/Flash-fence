@@ -1,6 +1,10 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata, webPageJsonLd } from "@/lib/seo";
+
+export const metadata = pageMetadata("/sitemap");
 
 export default function SitemapPage() {
   const SITEMAP_SECTIONS = [
@@ -8,11 +12,11 @@ export default function SitemapPage() {
       title: "Core Pages",
       links: [
         { path: "/", label: "Home Page" },
-        { path: "/about", label: "About Us" },
+        { path: "/about-us", label: "About Us" },
         { path: "/gallery", label: "Project Gallery" },
         { path: "/testimonials", label: "Customer Testimonials" },
         { path: "/faq", label: "Frequently Asked Questions" },
-        { path: "/contact", label: "Contact & Quote Request" },
+        { path: "/contact-us", label: "Contact & Quote Request" },
       ],
     },
     {
@@ -39,13 +43,20 @@ export default function SitemapPage() {
         { path: "/privacy", label: "Privacy Policy" },
         { path: "/ai-policy", label: "AI Policy & Operations" },
         { path: "/ai-readiness-service-index", label: "AI Readiness Service Index" },
-        { path: "/sitemap", label: "Sitemap Index" },
+        { path: "/sitemap", label: "HTML Sitemap" },
+        { path: "/sitemap.xml", label: "XML Sitemap" },
       ],
     },
   ];
 
   return (
     <div className="inner-page">
+      <JsonLd
+        data={webPageJsonLd("/sitemap", [
+          { name: "Home", path: "/" },
+          { name: "Sitemap", path: "/sitemap" },
+        ])}
+      />
       <PageHero
         eyebrow="Route Directory"
         title="Sitemap"
@@ -69,9 +80,15 @@ export default function SitemapPage() {
                 <ul className="sitemap-links">
                   {section.links.map((link) => (
                     <li key={link.path}>
-                      <Link href={link.path} className="sitemap-link">
-                        {link.label}
-                      </Link>
+                      {link.path.endsWith(".xml") ? (
+                        <a href={link.path} className="sitemap-link">
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link href={link.path} className="sitemap-link">
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

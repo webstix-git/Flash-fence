@@ -1,15 +1,8 @@
-import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import InnerPageCta from "@/components/InnerPageCta";
 import ReviewsBlock from "@/components/ReviewsBlock";
 import { TESTIMONIALS } from "@/data/testimonials";
-
-export const metadata: Metadata = {
-  title: "Customer Reviews & Testimonials | Flash Fence",
-  description:
-    "Read real Google reviews from Chippewa Valley homeowners who hired Flash Fence for fencing installation and excavation work.",
-};
 
 export default function TestimonialsPage() {
   return (

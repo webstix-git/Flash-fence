@@ -10,7 +10,7 @@ export default function StickyActionBar() {
         <Phone size={18} />
         <span>Request Call</span>
       </a>
-      <Link href="/contact" className="sticky-action-item" aria-label="Get a free estimate">
+      <Link href="/contact-us" className="sticky-action-item" aria-label="Get a free estimate">
         <Calendar size={18} />
         <span>Free Estimate</span>
       </Link>
