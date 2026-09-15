@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { buildQuoteSmsMessage, sendQuoteSms } from "@/lib/twilio-sms";
-import { getRequestIp, verifyTurnstileToken } from "@/lib/turnstile";
+import { verifyTurnstileToken } from "@/lib/turnstile";
+
+export const dynamic = "force-dynamic";
 
 async function parseQuoteRequest(request: Request) {
   const contentType = request.headers.get("content-type") || "";
@@ -35,12 +37,9 @@ export async function POST(request: Request) {
     const { name, phone, email, serviceType, details, turnstileToken } =
       await parseQuoteRequest(request);
 
-    const captchaOk = await verifyTurnstileToken(turnstileToken, getRequestIp(request));
-    if (!captchaOk) {
-      return NextResponse.json(
-        { error: "Captcha verification failed. Please try again." },
-        { status: 400 }
-      );
+    const captcha = await verifyTurnstileToken(turnstileToken);
+    if (!captcha.ok) {
+      return NextResponse.json({ error: captcha.error }, { status: 400 });
     }
 
     if (!name || !phone) {

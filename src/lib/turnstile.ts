@@ -5,43 +5,80 @@ type TurnstileVerifyResponse = {
   "error-codes"?: string[];
 };
 
-export async function verifyTurnstileToken(token: string | undefined, remoteIp?: string) {
-  const secret = process.env.TURNSTILE_SECRET_KEY;
+export type TurnstileVerifyResult = {
+  ok: boolean;
+  error: string;
+};
+
+function getTurnstileSecret() {
+  return (
+    process.env.TURNSTILE_SECRET_KEY?.trim() ||
+    process.env.TURNSTILE_SECRET?.trim() ||
+    ""
+  );
+}
+
+function messageForErrorCodes(codes: string[] | undefined) {
+  if (!codes?.length) {
+    return "Captcha verification failed. Please try again.";
+  }
+
+  if (codes.includes("missing-input-secret") || codes.includes("invalid-input-secret")) {
+    return "Captcha is not configured correctly on the server. Add TURNSTILE_SECRET_KEY in Vercel Production and redeploy.";
+  }
+
+  if (codes.includes("timeout-or-duplicate") || codes.includes("invalid-input-response")) {
+    return "Captcha expired. Please complete it again and resubmit.";
+  }
+
+  return "Captcha verification failed. Please try again.";
+}
+
+export async function verifyTurnstileToken(token: string | undefined): Promise<TurnstileVerifyResult> {
+  const secret = getTurnstileSecret();
 
   if (!secret) {
     console.error("TURNSTILE_SECRET_KEY is not set.");
-    return false;
+    return {
+      ok: false,
+      error:
+        "Captcha is not configured on the server. Add TURNSTILE_SECRET_KEY in Vercel Production and redeploy.",
+    };
   }
 
-  if (!token) {
-    return false;
+  if (!token?.trim()) {
+    return {
+      ok: false,
+      error: "Please complete the captcha before sending your request.",
+    };
   }
 
-  const body = new URLSearchParams({
-    secret,
-    response: token,
-  });
+  try {
+    const response = await fetch(TURNSTILE_VERIFY_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret,
+        response: token.trim(),
+      }),
+    });
 
-  if (remoteIp) {
-    body.append("remoteip", remoteIp);
+    const result = (await response.json()) as TurnstileVerifyResponse;
+
+    if (!result.success) {
+      console.error("Turnstile verification failed:", result["error-codes"]);
+      return {
+        ok: false,
+        error: messageForErrorCodes(result["error-codes"]),
+      };
+    }
+
+    return { ok: true, error: "" };
+  } catch (error) {
+    console.error("Turnstile verify request failed:", error);
+    return {
+      ok: false,
+      error: "Captcha verification failed. Please try again.",
+    };
   }
-
-  const response = await fetch(TURNSTILE_VERIFY_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body,
-  });
-
-  if (!response.ok) {
-    console.error("Turnstile verify request failed:", response.status);
-    return false;
-  }
-
-  const result = (await response.json()) as TurnstileVerifyResponse;
-  return result.success === true;
-}
-
-export function getRequestIp(request: Request) {
-  const forwarded = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for");
-  return forwarded?.split(",")[0]?.trim() || undefined;
 }
