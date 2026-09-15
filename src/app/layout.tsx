@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   description:
     "Get perfectionist quality fence installation (vinyl, wood, chain link) and reliable excavation services in Chippewa Valley. 2-Year Craftsmanship Warranty. Owner Dylan Gardow always on site.",
   applicationName: SITE_NAME,
+  verification: {
+    google: "axdEfeaX7DcraUdCDq31D-Ujjq1La4oBNHFj7q8uqJk",
+  },
   icons: {
     icon: [{ url: "/icon.png", sizes: "32x32", type: "image/png" }],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
