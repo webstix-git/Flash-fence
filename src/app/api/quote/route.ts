@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { buildQuoteSmsMessage, sendQuoteSms } from "@/lib/twilio-sms";
+import { getRequestIp, verifyTurnstileToken } from "@/lib/turnstile";
 
 async function parseQuoteRequest(request: Request) {
   const contentType = request.headers.get("content-type") || "";
@@ -12,6 +13,7 @@ async function parseQuoteRequest(request: Request) {
       email: body.email as string | undefined,
       serviceType: body.serviceType as string | undefined,
       details: body.details as string | undefined,
+      turnstileToken: (body.turnstileToken || body["cf-turnstile-response"]) as string | undefined,
     };
   }
 
@@ -22,12 +24,24 @@ async function parseQuoteRequest(request: Request) {
     email: formData.get("email")?.toString(),
     serviceType: formData.get("serviceType")?.toString(),
     details: formData.get("details")?.toString(),
+    turnstileToken:
+      formData.get("turnstileToken")?.toString() ||
+      formData.get("cf-turnstile-response")?.toString(),
   };
 }
 
 export async function POST(request: Request) {
   try {
-    const { name, phone, email, serviceType, details } = await parseQuoteRequest(request);
+    const { name, phone, email, serviceType, details, turnstileToken } =
+      await parseQuoteRequest(request);
+
+    const captchaOk = await verifyTurnstileToken(turnstileToken, getRequestIp(request));
+    if (!captchaOk) {
+      return NextResponse.json(
+        { error: "Captcha verification failed. Please try again." },
+        { status: 400 }
+      );
+    }
 
     if (!name || !phone) {
       return NextResponse.json(

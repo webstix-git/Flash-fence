@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface QuoteFormProps {
   variant?: "dark" | "light";
@@ -9,29 +10,6 @@ interface QuoteFormProps {
 }
 
 const DEFAULT_FORM_ACTION = "/api/quote";
-
-type QuoteFormValues = {
-  name: string;
-  phone: string;
-  email: string;
-  serviceType: string;
-  details: string;
-};
-
-async function sendSmsNotification(formValues: QuoteFormValues) {
-  const res = await fetch(DEFAULT_FORM_ACTION, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formValues),
-  });
-
-  if (!res.ok) {
-    const data = await res.json().catch(() => ({}));
-    console.error("SMS notification failed:", data.error || res.statusText);
-  }
-
-  return res.ok;
-}
 
 export default function QuoteForm({
   variant = "dark",
@@ -47,6 +25,13 @@ export default function QuoteForm({
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileReset, setTurnstileReset] = useState(0);
+
+  const resetCaptcha = () => {
+    setTurnstileToken("");
+    setTurnstileReset((count) => count + 1);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -61,55 +46,74 @@ export default function QuoteForm({
       return;
     }
 
+    if (!turnstileToken) {
+      setStatus("error");
+      setFeedbackMessage("Please complete the captcha before sending your request.");
+      return;
+    }
+
     setStatus("loading");
     setFeedbackMessage("");
 
     try {
-      const payload = new FormData();
-      payload.append("name", formData.name);
-      payload.append("phone", formData.phone);
-      payload.append("email", formData.email);
-      payload.append("serviceType", formData.serviceType);
-      payload.append("details", formData.details);
-
       const usesExternalAction = actionUrl !== DEFAULT_FORM_ACTION;
 
-      const [supabaseRes] = await Promise.all([
-        fetch(actionUrl, {
-          method: "POST",
-          body: payload,
+      const quoteRes = await fetch(DEFAULT_FORM_ACTION, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken,
         }),
-        usesExternalAction ? sendSmsNotification(formData) : Promise.resolve(true),
-      ]);
-
-      const res = supabaseRes;
+      });
 
       let data: { message?: string; error?: string } = {};
       try {
-        data = await res.json();
+        data = await quoteRes.json();
       } catch {
         data = {};
       }
 
-      if (res.ok) {
-        setStatus("success");
-        setFeedbackMessage(
-          data.message || "Your quote request has been sent! I will text or call you shortly."
-        );
-        // Reset form
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          serviceType: "fencing",
-          details: "",
-        });
-      } else {
+      if (!quoteRes.ok) {
+        resetCaptcha();
         setStatus("error");
         setFeedbackMessage(data.error || "Something went wrong. Please call us directly at 715-299-0663.");
+        return;
       }
+
+      if (usesExternalAction) {
+        const payload = new FormData();
+        payload.append("name", formData.name);
+        payload.append("phone", formData.phone);
+        payload.append("email", formData.email);
+        payload.append("serviceType", formData.serviceType);
+        payload.append("details", formData.details);
+
+        const supabaseRes = await fetch(actionUrl, {
+          method: "POST",
+          body: payload,
+        });
+
+        if (!supabaseRes.ok) {
+          console.error("External form submit failed:", supabaseRes.statusText);
+        }
+      }
+
+      setStatus("success");
+      setFeedbackMessage(
+        data.message || "Your quote request has been sent! I will text or call you shortly."
+      );
+      resetCaptcha();
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        serviceType: "fencing",
+        details: "",
+      });
     } catch (err) {
       console.error("Submission error:", err);
+      resetCaptcha();
       setStatus("error");
       setFeedbackMessage("Connection error. Please check your signal or call 715-299-0663 directly.");
     }
@@ -239,6 +243,16 @@ export default function QuoteForm({
           />
         </div>
 
+        {/* Captcha */}
+        <div className="form-group form-full">
+          <TurnstileWidget
+            theme={variant === "light" ? "light" : "dark"}
+            onToken={setTurnstileToken}
+            onExpire={() => setTurnstileToken("")}
+            resetSignal={turnstileReset}
+          />
+        </div>
+
         {/* Feedback Messages */}
         {status === "error" && (
           <div className="form-full form-feedback form-feedback-error">
@@ -253,7 +267,7 @@ export default function QuoteForm({
             type="submit"
             className="btn btn-primary"
             style={{ width: "100%", height: "52px" }}
-            disabled={status === "loading"}
+            disabled={status === "loading" || !turnstileToken}
           >
             {status === "loading" ? (
               <>
