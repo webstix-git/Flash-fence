@@ -8,6 +8,20 @@ export type GalleryProject = {
 
 export const GALLERY_PROJECTS: GalleryProject[] = [
   {
+    id: 29,
+    title: "Galvanized Chain Link Yard Fence",
+    category: "fencing",
+    image: "/gallery/gallery-29.jpg",
+    details: "Galvanized chain link fence and gate enclosing a residential backyard.",
+  },
+  {
+    id: 30,
+    title: "White Vinyl Privacy Fence With Deck",
+    category: "fencing",
+    image: "/gallery/gallery-30.jpg",
+    details: "White vinyl privacy fence installed beside a residential deck and rock bed.",
+  },
+  {
     id: 1,
     title: "Vinyl Materials Staged On Site",
     category: "fencing",
